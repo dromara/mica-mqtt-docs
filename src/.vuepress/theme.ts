@@ -29,6 +29,9 @@ export default hopeTheme({
 
   displayFooter: true,
 
+  // 打印按钮
+  print: true,
+
   // page meta
   metaLocales: {
     editLink: "在 GitHub 上编辑此页",
@@ -64,7 +67,7 @@ export default hopeTheme({
     sup: true,
     tabs: true,
     tasklist: true,
-    vPre: true,
+    vPre: true
   },
 
   plugins: {
@@ -74,11 +77,10 @@ export default hopeTheme({
       content: 'xxxx',
       actions: [
         {
-          text: 'Primary Action',
+          text: '立即查看',
           link: 'https://theme-hope.vuejs.press/',
           type: 'primary',
         },
-        { text: 'Default Action' },
       ],
     }]
   },
