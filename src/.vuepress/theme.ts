@@ -19,25 +19,19 @@ export default hopeTheme({
 
   docsDir: "src",
 
-  locales: {
-    "": {
-      // navbar
-      navbar: zhNavbar,
+  navbar: zhNavbar,
 
-      // sidebar
-      sidebar: zhSidebar,
+  sidebar: zhSidebar,
 
-      footer:
-          "<a href=\"https://beian.miit.gov.cn\" target=\"_blank\" rel=\"nofollow\">京ICP备13040556号-2</a>&nbsp&nbsp" +
-          "<a href=\"http://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"nofollow\">CC BY 4.0</a>",
+  footer:
+      "<a href=\"https://beian.miit.gov.cn\" target=\"_blank\" rel=\"nofollow\">京ICP备13040556号-2</a>&nbsp&nbsp" +
+      "<a href=\"http://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"nofollow\">CC BY 4.0</a>",
 
-      displayFooter: true,
+  displayFooter: true,
 
-      // page meta
-      metaLocales: {
-        editLink: "在 GitHub 上编辑此页",
-      },
-    },
+  // page meta
+  metaLocales: {
+    editLink: "在 GitHub 上编辑此页",
   },
 
   // These features are enabled for demo, only preserve features you need here
