@@ -1,7 +1,7 @@
 import { hopeTheme } from "vuepress-theme-hope";
 
-import { enNavbar, zhNavbar } from "./navbar/index.js";
-import { enSidebar, zhSidebar } from "./sidebar/index.js";
+import { zhNavbar } from "./navbar/index.js";
+import { zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
   hostname: "https://mica-mqtt.dreamlu.net",
@@ -13,35 +13,14 @@ export default hopeTheme({
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "https://dromara.org.cn/logo.svg",
+  logo: "logo.png",
 
   repo: "dromara/mica-mqtt",
 
   docsDir: "src",
 
   locales: {
-    "/": {
-      // navbar
-      navbar: enNavbar,
-
-      // sidebar
-      sidebar: enSidebar,
-
-      footer:
-          "<a href=\"https://beian.miit.gov.cn\" target=\"_blank\" rel=\"nofollow\">京ICP备13040556号-2</a>&nbsp&nbsp" +
-          "<a href=\"http://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"nofollow\">CC BY 4.0</a>",
-
-      displayFooter: true,
-
-      metaLocales: {
-        editLink: "Edit this page on GitHub",
-      },
-    },
-
-    /**
-     * Chinese locale config
-     */
-    "/zh/": {
+    "": {
       // navbar
       navbar: zhNavbar,
 

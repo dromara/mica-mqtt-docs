@@ -3,4 +3,4 @@ title: Ray
 icon: circle-info
 ---
 
-Feature details here.
+功能详情...

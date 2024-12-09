@@ -3,4 +3,4 @@ title: Baz
 icon: circle-info
 ---
 
-Feature details here.
+功能详情...

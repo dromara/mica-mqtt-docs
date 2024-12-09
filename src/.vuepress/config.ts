@@ -6,19 +6,6 @@ import theme from "./theme.js";
 export default defineUserConfig({
   base: "/",
 
-  locales: {
-    "/": {
-      lang: "en-US",
-      title: "mica-mqtt",
-      description: "mica-mqtt docs",
-    },
-    "/zh/": {
-      lang: "zh-CN",
-      title: "mica-mqtt",
-      description: "mica-mqtt 文档",
-    },
-  },
-
   theme,
 
   plugins: [
