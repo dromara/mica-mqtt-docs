@@ -78,7 +78,7 @@ export default hopeTheme({
       actions: [
         {
           text: '立即查看',
-          link: 'https://theme-hope.vuejs.press/',
+          link: '/version/changelog.html',
           type: 'primary',
         },
       ],

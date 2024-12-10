@@ -4,7 +4,7 @@ export const zhNavbar = navbar([
   "/",
   {
     text: "mqtt科普",
-    icon: "lightbulb",
+    icon: "globe",
     prefix: "mqtt/",
     children: [
       {
@@ -22,7 +22,7 @@ export const zhNavbar = navbar([
     ],
   },
   {
-    text: "指南",
+    text: "mica-mqtt指南",
     icon: "lightbulb",
     prefix: "guide/",
     children: [
@@ -41,19 +41,8 @@ export const zhNavbar = navbar([
     ],
   },
   {
-    text: "模块",
-    icon: "lightbulb",
-    prefix: "version/",
-    children: [
-      "changelog"
-    ],
-  },
-  {
-    text: "更新记录",
-    icon: "lightbulb",
-    prefix: "version/",
-    children: [
-        "changelog"
-    ],
+    text: "发行版本",
+    icon: "tag",
+    link: "version/changelog"
   }
 ]);
