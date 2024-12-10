@@ -13,10 +13,19 @@ export const zhNavbar = navbar([
         link: "topic",
       },
       {
-        text: "Foo",
-        icon: "lightbulb",
-        prefix: "foo/",
-        children: ["ray", { text: "...", icon: "ellipsis", link: "" }],
+        text: "遗嘱消息",
+        icon: "message",
+        link: "will",
+      },
+      {
+        text: "保留消息",
+        icon: "inbox",
+        link: "retain",
+      },
+      {
+        text: "心跳保活",
+        icon: "heart-pulse",
+        link: "keepalive",
       },
     ],
   },
