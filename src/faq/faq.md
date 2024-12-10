@@ -68,6 +68,7 @@ SNAPSHOT 版本使用参考这里：https://www.dreamlu.net/mica2x/#%E4%BD%BF%E7
 
 ```xml
 <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
 	<artifactId>maven-resources-plugin</artifactId>
 	<configuration>
 		<nonFilteredFileExtensions>

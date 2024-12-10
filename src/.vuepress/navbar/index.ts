@@ -60,12 +60,17 @@ export const zhNavbar = navbar([
   },
   {
     text: "常见问题汇总",
-    icon: "lightbulb",
-    link: "faq/readme"
+    icon: "question",
+    link: "faq/faq"
   },
   {
     text: "发行版本",
     icon: "tag",
     link: "version/changelog"
-  }
+  },
+  {
+    text: "PIG AI（mica-mqtt技术手册）",
+    icon: "robot",
+    link: "https://home.pig4cloud.com:38443/bot/index.html#/0/1809133293843144705/chat/1729581143528"
+  },
 ]);

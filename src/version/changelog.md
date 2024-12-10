@@ -1,21 +1,6 @@
 ---
 title: 发行版本
 icon: tag
-order: 4
-
-sidebar: false
-
-breadcrumb: false
-pageInfo: false
-contributors: false
-editLink: false
-lastUpdated: false
-prev: false
-next: false
-comment: false
-footer: false
-
-backtotop: false
 ---
 
 ### v2.4.0 - 2024-12-07
