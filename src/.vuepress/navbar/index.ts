@@ -3,7 +3,7 @@ import { navbar } from "vuepress-theme-hope";
 export const zhNavbar = navbar([
   "/",
   {
-    text: "mqtt科普",
+    text: "mqtt 科普",
     icon: "globe",
     prefix: "mqtt/",
     children: [
@@ -27,10 +27,20 @@ export const zhNavbar = navbar([
         icon: "heart-pulse",
         link: "keepalive",
       },
+      {
+        text: "客户端 Id",
+        icon: "passport",
+        link: "clientId",
+      },
+      {
+        text: "客户端工具",
+        icon: "screwdriver-wrench",
+        link: "tool",
+      },
     ],
   },
   {
-    text: "mica-mqtt指南",
+    text: "mica-mqtt 指南",
     icon: "lightbulb",
     prefix: "guide/",
     children: [
