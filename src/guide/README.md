@@ -1,5 +1,5 @@
 ---
-title: 指南
+title: 快速上手
 icon: lightbulb
 ---
 
