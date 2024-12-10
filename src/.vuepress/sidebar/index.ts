@@ -4,15 +4,16 @@ export const zhSidebar = sidebar({
   "/": [
     "",
     {
-      text: "文档",
-      icon: "book",
-      prefix: "guide/",
+      text: "mqtt科普",
+      icon: "globe",
+      prefix: "mqtt/",
       children: "structure",
     },
     {
-      text: "幻灯片",
-      icon: "person-chalkboard",
-      link: "https://ecosystem.vuejs.press/zh/plugins/markdown/revealjs/demo.html",
-    },
+      text: "mica-mqtt指南",
+      icon: "lightbulb",
+      prefix: "guide/",
+      children: "structure",
+    }
   ],
 });

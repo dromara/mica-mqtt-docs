@@ -8,10 +8,9 @@ export const zhNavbar = navbar([
     prefix: "mqtt/",
     children: [
       {
-        text: "Bar",
-        icon: "lightbulb",
-        prefix: "bar/",
-        children: ["baz", { text: "...", icon: "ellipsis", link: "" }],
+        text: "Topic",
+        icon: "hashtag",
+        link: "topic",
       },
       {
         text: "Foo",
@@ -39,6 +38,11 @@ export const zhNavbar = navbar([
         children: ["ray", { text: "...", icon: "ellipsis", link: "" }],
       },
     ],
+  },
+  {
+    text: "常见问题汇总",
+    icon: "lightbulb",
+    link: "faq/readme"
   },
   {
     text: "发行版本",
