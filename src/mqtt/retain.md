@@ -1,5 +1,6 @@
 ---
 title: 保留消息
+icon: inbox
 order: 3
 ---
 

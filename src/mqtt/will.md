@@ -1,5 +1,6 @@
 ---
 title: 遗嘱消息
+icon: message
 order: 2
 ---
 

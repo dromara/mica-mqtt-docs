@@ -1,5 +1,6 @@
 ---
 title: Topic 规则
+icon: hashtag
 order: 1
 ---
 

@@ -32,11 +32,6 @@ export default hopeTheme({
   // 打印按钮
   print: true,
 
-  // page meta
-  metaLocales: {
-    editLink: "在 GitHub 上编辑此页",
-  },
-
   // These features are enabled for demo, only preserve features you need here
   markdown: {
     align: true,
