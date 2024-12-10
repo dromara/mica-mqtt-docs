@@ -8,7 +8,7 @@ export const zhNavbar = navbar([
     prefix: "mqtt/",
     children: [
       {
-        text: "Topic",
+        text: "Topic 规则",
         icon: "hashtag",
         link: "topic",
       },
