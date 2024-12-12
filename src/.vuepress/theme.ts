@@ -69,7 +69,7 @@ export default hopeTheme({
     notice: [{
       path: '/',
       title: 'mica-mqtt 2.4.0 正式版发布',
-      content: 'xxxx',
+      content: '加入 dromara 社区的第一个正式版',
       actions: [
         {
           text: '立即查看',
