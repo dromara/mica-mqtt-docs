@@ -20,9 +20,11 @@ export const zhSidebar = sidebar({
           prefix: "java/",
           children: [{
               text: "mqtt client",
+              icon: "microchip",
               link: "client",
             },{
               text: "mqtt server",
+              icon: "server",
               link: "server",
             }]
         },
@@ -32,9 +34,11 @@ export const zhSidebar = sidebar({
           prefix: "spring/",
           children: [{
             text: "mqtt client",
+            icon: "microchip",
             link: "client",
           },{
             text: "mqtt server",
+            icon: "server",
             link: "server",
           }]
         },
@@ -44,9 +48,11 @@ export const zhSidebar = sidebar({
           prefix: "solon/",
           children: [{
             text: "mqtt client",
+            icon: "microchip",
             link: "client",
           },{
             text: "mqtt server",
+            icon: "server",
             link: "server",
           }]
         },
@@ -56,9 +62,11 @@ export const zhSidebar = sidebar({
           prefix: "jfinal/",
           children: [{
             text: "mqtt client",
+            icon: "microchip",
             link: "client",
           },{
             text: "mqtt server",
+            icon: "server",
             link: "server",
           }]
         },
