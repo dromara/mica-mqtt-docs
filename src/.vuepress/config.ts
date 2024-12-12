@@ -1,6 +1,4 @@
 import { defineUserConfig } from "vuepress";
-import { slimsearchPlugin } from '@vuepress/plugin-slimsearch'
-
 import theme from "./theme.js";
 
 export default defineUserConfig({
@@ -15,12 +13,5 @@ export default defineUserConfig({
   },
 
   theme,
-
-  plugins: [
-    slimsearchPlugin({
-      indexContent: true,
-      suggestion: true
-    }),
-  ],
 
 });

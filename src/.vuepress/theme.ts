@@ -66,6 +66,10 @@ export default hopeTheme({
   },
 
   plugins: {
+    slimsearch: {
+      indexContent: true,
+      suggestion: true
+    },
     notice: [{
       path: '/',
       title: 'mica-mqtt 2.4.0 正式版发布',
