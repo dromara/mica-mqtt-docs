@@ -3,6 +3,10 @@ title: 快速上手
 icon: lightbulb
 ---
 
+## 科普视频
+
+- [mqtt科普、mqttx、mica-mqtt的使用**视频**](https://www.bilibili.com/video/BV1wv4y1F7Av/)
+
 ## 普通 Java 程序
 
 - [mica mqtt client 客户端使用文档](java/client.md)
