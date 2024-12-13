@@ -4,6 +4,10 @@ icon: microchip
 order: 1
 ---
 
+## 科普视频
+
+- [mqtt科普、mqttx、mica-mqtt的使用**视频**](https://www.bilibili.com/video/BV1wv4y1F7Av/)
+
 ## 使用
 
 #### 1. 添加依赖

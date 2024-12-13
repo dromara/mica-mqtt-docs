@@ -6,6 +6,10 @@ order: 1
 
 本插件基于 https://gitee.com/peigenlpy/mica-mqtt-solon-plugin 调整合并到官方（已经过作者同意）。
 
+## 科普视频
+
+- [mqtt科普、mqttx、mica-mqtt的使用**视频**](https://www.bilibili.com/video/BV1wv4y1F7Av/)
+
 ## 版本兼容
 | 要求  | Solon 版本 |
 |-----|-------|
