@@ -1,4 +1,4 @@
-# dromara mica-mqtt 文档
+# Dromara mica-mqtt 文档
 
 `mica-mqtt` **低延迟**、**高性能**的 `mqtt` 物联网组件。
 
