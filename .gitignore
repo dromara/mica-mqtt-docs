@@ -1,5 +1,15 @@
+### IntelliJ IDEA ###
+!.idea/icon.png
+.idea
+out/
+*.iws
+*.iml
+*.ipr
 
+### node ###
 node_modules/
+
+### vuepress ###
 src/.vuepress/.cache/
 src/.vuepress/.temp/
 src/.vuepress/dist/
