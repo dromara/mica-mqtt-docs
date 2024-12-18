@@ -37,6 +37,7 @@ jobs:
           > src/.vuepress/dist/.nojekyll
       - name: 部署文档
         uses: JamesIves/github-pages-deploy-action@v4
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         with:
           # 部署文档
           branch: dist
