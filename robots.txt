@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://mica-mqtt.dreamlu.net/sitemap.xml
+Sitemap: https://mica-mqtt.dromara.org/sitemap.xml
