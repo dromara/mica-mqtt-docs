@@ -4,11 +4,11 @@ import { zhNavbar } from "./navbar/index.js";
 import { zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
-  hostname: "https://mica-mqtt.dreamlu.net",
+  hostname: "https://mica-mqtt.dromara.org",
 
   author: {
-    name: "如梦技术",
-    url: "https://www.dreamlu.net",
+    name: "@dromara.org",
+    url: "https://dromara.org",
   },
 
   iconAssets: "fontawesome-with-brands",
@@ -23,9 +23,7 @@ export default hopeTheme({
 
   sidebar: zhSidebar,
 
-  footer:
-      "<a href=\"https://beian.miit.gov.cn\" target=\"_blank\" rel=\"nofollow\">京ICP备13040556号-2</a>&nbsp&nbsp" +
-      "<a href=\"http://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"nofollow\">CC BY 4.0</a>",
+  footer: "",
 
   displayFooter: true,
 
