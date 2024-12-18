@@ -11,6 +11,9 @@ actions:
   - text: 快速开始
     link: ./guide/
     type: primary
+  - text: 最佳实践
+    link: https://iot.bladex.cn?from=mica-mqtt
+    type: primary
 
 highlights:
   - header: 简单、轻量、易集成、持续更新！
