@@ -30,6 +30,9 @@ export default hopeTheme({
   // 打印按钮
   print: true,
 
+  // 编辑链接
+  editLink: false,
+
   // These features are enabled for demo, only preserve features you need here
   markdown: {
     align: true,
