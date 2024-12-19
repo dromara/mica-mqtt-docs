@@ -7,7 +7,7 @@ export default hopeTheme({
   hostname: "https://mica-mqtt.dromara.org",
 
   author: {
-    name: "@dromara.org",
+    name: "mica-mqtt@dromara.org",
     url: "https://dromara.org",
   },
 
@@ -16,7 +16,7 @@ export default hopeTheme({
   logo: "logo.png",
 
   repo: "dromara/mica-mqtt",
-
+  docsRepo: "dromara/mica-mqtt-docs",
   docsDir: "src",
 
   navbar: zhNavbar,
@@ -29,9 +29,6 @@ export default hopeTheme({
 
   // 打印按钮
   print: true,
-
-  // 编辑链接
-  editLink: false,
 
   // These features are enabled for demo, only preserve features you need here
   markdown: {
