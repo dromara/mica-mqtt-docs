@@ -21,7 +21,7 @@ order: 1
 ```xml
 <dependency>
     <groupId>org.dromara.mica-mqtt</groupId>
-    <artifactId>mica-mqtt-client-solon-plugin-parent</artifactId>
+    <artifactId>mica-mqtt-client-solon-plugin</artifactId>
     <version>${version}</version>
 </dependency>
 ```
