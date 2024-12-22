@@ -68,6 +68,11 @@ export const zhNavbar = navbar([
         prefix: "jfinal/",
         children: ["client", "server"],
       },
+      {
+        text: "Http Api 接口",
+        icon: "a",
+        link: "httpApi",
+      },
     ],
   },
   {
