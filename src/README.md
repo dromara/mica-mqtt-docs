@@ -1,7 +1,7 @@
 ---
 home: true
 icon: home
-title: 主页
+title: mica mqtt 官方主页
 heroImage: mica-mqtt.png
 heroText: mica-mqtt
 tagline: 基于 java aio 实现，开源、简单、易用、低延迟、高性能百万级 java mqtt client 组件和 java mqtt broker 服务。
