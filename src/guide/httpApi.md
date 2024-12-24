@@ -3,8 +3,6 @@ title: mica mqtt Http Api 接口
 icon: lightbulb
 ---
 
-## Http Api 接口
-
 ### HTTP 状态码 (status codes)
 
 接口在调用成功时总是返回 200 OK，响应内容则以 JSON 格式返回。
