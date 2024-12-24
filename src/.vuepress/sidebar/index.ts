@@ -17,6 +17,7 @@ export const zhSidebar = sidebar({
           text: "普通 Java 应用",
           icon: "fire",
           prefix: "java/",
+          collapsible: true,
           children: [{
               text: "mqtt client",
               icon: "microchip",
@@ -31,6 +32,7 @@ export const zhSidebar = sidebar({
           text: "Spring boot 应用",
           icon: "fire",
           prefix: "spring/",
+          collapsible: true,
           children: [{
             text: "mqtt client",
             icon: "microchip",
@@ -45,6 +47,7 @@ export const zhSidebar = sidebar({
           text: "Solon 应用",
           icon: "fire",
           prefix: "solon/",
+          collapsible: true,
           children: [{
             text: "mqtt client",
             icon: "microchip",
@@ -59,6 +62,7 @@ export const zhSidebar = sidebar({
           text: "JFinal 应用",
           icon: "fire",
           prefix: "jfinal/",
+          collapsible: true,
           children: [{
             text: "mqtt client",
             icon: "microchip",
