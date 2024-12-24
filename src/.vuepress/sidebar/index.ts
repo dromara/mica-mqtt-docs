@@ -2,7 +2,6 @@ import { sidebar } from "vuepress-theme-hope";
 
 export const zhSidebar = sidebar({
   "/": [
-    "",
     {
       text: "mqtt科普",
       icon: "globe",
