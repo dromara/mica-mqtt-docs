@@ -20,6 +20,7 @@ title: 常见问题汇总
 该问题主要是 jar 编译问题，由于 JDK9+ 改了 ByteBuffer 部分返回值的类型，导致 java9+ 下编译的 jar 在 java8 下运行会有问题。如果遇到此问题，请立刻反馈。
 
 ## 4、多个客户端使用相同 clientId 导致前者被踢下线（周期性上下线）
+- 多个客户端相同 clientId 互踢日志关键字 **准备关闭连接 ... now bind on new context id:\[xxxx]** 
 - clientId 对于在 mqtt 中起着十分重要的作用，请不要随意设置，建议按照产品、设备、sn等维度生成，并且**确保唯一**。
 - 如果实在是要兼容老业务，可以实现 `IMqttServerUniqueIdService` (1.1.4开始支持) 接口，返回的 `uniqueId` 会替代 clientId，后续的场景也是需要使用这个 `uniqueId` 来处理。
 
