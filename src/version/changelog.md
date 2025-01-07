@@ -3,6 +3,12 @@ title: 发行版本
 icon: tag
 ---
 
+### v2.4.1 - 2025-01-04
+- :sparkles: mqtt server 统一 topic 订阅、发布认证日志方便排查问题。
+- :sparkles: mqtt server 添加 PROXY protocol v1 支持，nginx 可开启 tcp proxy_protocol on; 时转发源 ip 信息。
+- :memo: 修复文档 maven 坐标错误。
+- :bug: 修复 spring boot 项目使用全局懒加载 topic无法订阅 gitee #IBFIV8 感谢 `@xixuanhao` 反馈
+
 ### v2.4.0 - 2024-12-07
 - :sparkles: http api 添加 `stats`、`clients` 列表和 `client详情` 接口。
 - :sparkles: MqttServer 和 MqttServerTemplate 添加 `getClientInfo` `getClients` 系列客户端信息接口。

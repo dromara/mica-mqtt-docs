@@ -70,8 +70,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.4.0 正式版发布',
-      content: '加入 dromara 社区的第一个正式版',
+      title: 'mica-mqtt 2.4.1 发布',
+      content: 'mqtt server 添加 PROXY protocol v1 支持',
       actions: [
         {
           text: '立即查看',
