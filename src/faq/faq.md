@@ -191,6 +191,8 @@ client.on('reconnect', () => {
 
 **拔网线**等**非正常断开**需要一个心跳检测周期才会触发断开。
 
+对于设备可以监听到下电可以发送 logout topic （子设备）或者 mqtt disconnect 下线指令（直连设备）
+
 ## 十三、client、server 同时使用时 caffeine 依赖异常（v）
 ```java
 Failed to instantiate [net.dreamlu.iot.mqtt.core.server.MqttServer]: Factory method 'mqttServer' threw 
