@@ -31,15 +31,6 @@ icon: tag
 - :truck: 切换到 central sonatype，central sonatype 不支持快照版，mica-mqtt 不再发布快照版。
 - :bug: 修复订阅发送时机问题 gitee #IB72L6 感谢 `@江上烽` 反馈
 
-### v2.4.0-M2 - 2024-12-01
-- :sparkles: mica-mqtt-server 暴露获取 clientId 和状态统计接口
-- :bug: 修复订阅发送时机问题 gitee #IB72L6 感谢 `@江上烽` 反馈
-
-### v2.4.0-M1 - 2024-11-24
-- :sparkles: 调整 groupId 到 org.dromara.mica-mqtt
-- :truck: 切换包名到 org.dromara
-- :truck: 切换到 central sonatype， central sonatype 不支持快照版
-
 ### v2.3.9 - 2024-11-16
 - :sparkles: ssl 支持 **PKCS12** 证书，根据文件后缀自动判断 `.jks、.keystore` 识别为 **JKS证书**，`.p12、.pfx` 识别成 **PKCS12证书**。其他默认成**JKS**
 - :sparkles: 优化 **Solon** 版本依赖（仅编译依赖），兼容 `2.8.0` 和 `2.8.0` 以上版本。
