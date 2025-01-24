@@ -90,7 +90,7 @@ export const zhSidebar = sidebar({
         },
         {
           text: "Http Api 接口",
-          icon: "a",
+          icon: "h",
           link: "httpApi"
         },
       ],

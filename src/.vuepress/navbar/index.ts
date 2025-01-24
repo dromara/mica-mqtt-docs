@@ -80,7 +80,7 @@ export const zhNavbar = navbar([
       },
       {
         text: "Http Api 接口",
-        icon: "a",
+        icon: "h",
         link: "httpApi",
       },
     ],
