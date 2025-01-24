@@ -1,6 +1,6 @@
 ---
 title: mica mqtt server Android 原生服务端使用文档
-icon: android
+icon: mobile
 order: 2
 ---
 

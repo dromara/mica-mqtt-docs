@@ -56,7 +56,7 @@ export const zhNavbar = navbar([
       },
       {
         text: "Android 原生应用",
-        icon: "android",
+        icon: "mobile",
         prefix: "android/",
         children: ["client", "server"],
       },

@@ -30,7 +30,7 @@ export const zhSidebar = sidebar({
         },
         {
           text: "Android 原生应用",
-          icon: "android",
+          icon: "mobile",
           prefix: "android/",
           collapsible: true,
           children: [{
