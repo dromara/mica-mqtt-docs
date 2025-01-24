@@ -29,6 +29,21 @@ export const zhSidebar = sidebar({
             }]
         },
         {
+          text: "Android 原生应用",
+          icon: "android",
+          prefix: "android/",
+          collapsible: true,
+          children: [{
+            text: "mqtt client",
+            icon: "microchip",
+            link: "client",
+          },{
+            text: "mqtt server",
+            icon: "server",
+            link: "server",
+          }]
+        },
+        {
           text: "Spring boot 应用",
           icon: "fire",
           prefix: "spring/",
