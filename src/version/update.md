@@ -1,5 +1,5 @@
 ---
-title: 升级指南
+title: mica-mqtt 升级指南
 icon: arrow-up
 ---
 

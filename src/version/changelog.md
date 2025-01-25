@@ -1,5 +1,5 @@
 ---
-title: 发行版本
+title: mica-mqtt 发行版本
 icon: tag
 ---
 
