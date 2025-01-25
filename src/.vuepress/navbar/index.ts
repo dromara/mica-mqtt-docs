@@ -92,8 +92,20 @@ export const zhNavbar = navbar([
   },
   {
     text: "发行版本",
-    icon: "tag",
-    link: "version/changelog"
+    icon: "tags",
+    prefix: "version/",
+    children: [
+      {
+        text: "发行版本",
+        icon: "tag",
+        link: "changelog"
+      },
+      {
+        text: "升级指南",
+        icon: "arrow-up",
+        link: "update"
+      }
+    ]
   },
   {
     text: "PIG AI（mica-mqtt技术手册）",
