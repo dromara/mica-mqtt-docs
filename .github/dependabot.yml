@@ -5,7 +5,7 @@
 
 version: 2
 updates:
-  - package-ecosystem: "pnpm"
+  - package-ecosystem: "npm"
     target-branch: "main"     # 更新到 dev 分支
     directory: "/"
     schedule:
