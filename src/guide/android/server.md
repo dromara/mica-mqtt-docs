@@ -93,7 +93,7 @@ mqttServer.publishAll("/test/123", "mica最牛皮".getBytes(StandardCharsets.UTF
 mqttServer.stop();
 ```
 
-![Android启动效果](mica-mqtt-client-android.png)
+![Android启动效果](mica-mqtt-server-android.png)
 
 #### 3. http 和 websocket 依赖：
 
