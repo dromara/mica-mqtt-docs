@@ -17,7 +17,7 @@ actions:
 
 highlights:
   - header: 简单、轻量、易集成、持续更新！
-    image: /assets/image/box.svg
+    image: /assets/image/mqtt.svg
     highlights:
       - title: 支持 MQTT v3.1、v3.1.1 以及 v5.0 协议。
       - title: 支持 websocket mqtt 子协议（支持 mqtt.js）。
