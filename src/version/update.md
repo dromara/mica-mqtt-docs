@@ -7,7 +7,7 @@ icon: arrow-up
 
 ## 迁移到 mica-mqtt 2.4.2
 
-注意：2.4.2 将 MqttServerCustomizer 和 MqttClientCustomizer 抽到 mica-mqtt-server、mica-mqtt-client。Spring Boot 和 Solon 插入如果有使用到，请先将老的包导入删除，idea 会自动引入新的包。
+注意：2.4.2 将 MqttServerCustomizer 和 MqttClientCustomizer 抽到 mica-mqtt-server、mica-mqtt-client。Spring Boot 和 Solon 插件如果有使用到，请先将老的包导入删除，idea 会自动引入新的包。
 
 **客户端替换包导入：**
 - 替换成 `import org.dromara.mica.mqtt.core.client.MqttClientCustomizer;`
