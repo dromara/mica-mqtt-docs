@@ -37,14 +37,14 @@ export const zhNavbar = navbar([
         link: "clientId",
       },
       {
-        text: "客户端工具",
-        icon: "screwdriver-wrench",
-        link: "tool",
-      },
-      {
         text: "消息质量 QoS",
         icon: "spinner",
         link: "qos",
+      },
+      {
+        text: "客户端工具",
+        icon: "screwdriver-wrench",
+        link: "tool",
       },
     ],
   },
