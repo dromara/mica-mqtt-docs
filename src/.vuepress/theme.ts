@@ -11,8 +11,6 @@ export default hopeTheme({
     url: "https://dromara.org",
   },
 
-  iconAssets: "fontawesome-with-brands",
-
   logo: "logo.png",
 
   repo: "dromara/mica-mqtt",
@@ -64,6 +62,9 @@ export default hopeTheme({
   },
 
   plugins: {
+    icon: {
+      assets: "fontawesome"
+    },
     slimsearch: {
       indexContent: true,
       suggestion: true

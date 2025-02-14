@@ -41,6 +41,11 @@ export const zhNavbar = navbar([
         icon: "screwdriver-wrench",
         link: "tool",
       },
+      {
+        text: "消息质量 QoS",
+        icon: "spinner",
+        link: "qos",
+      },
     ],
   },
   {
