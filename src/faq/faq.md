@@ -55,11 +55,42 @@ stream {
 ## 6、Mqtt 集群
 mica-mqtt 1.1.2 版本开始添加了 `mica-mqtt-broker` 模块，采用 redis pub/sub 实现集群，有需求的朋友可以参考。
 
-## 7、SNAPSHOT 版本使用（central sonatype 不支持快照版，mica-mqtt 2.4.x 不再发布快照版）
+## 7、SNAPSHOT 版本使用（central sonatype 快照版仅仅存储 90 天，如果有使用需要尽快切到最新的正式版）
 
-**snapshots** 版本会及时响应修复最新的 bug 和需求。
+**snapshots** 版本会及时响应修复最新的 bug 和需求，dev 分支提交后 Github Action 会自动构建、发布。
 
-SNAPSHOT 版本使用参考这里：https://www.dreamlu.net/mica2x/#%E4%BD%BF%E7%94%A8-snapshots
+**maven:**
+```xml
+<repositories>
+  <repository>
+    <name>Central Portal Snapshots</name>
+    <id>central-portal-snapshots</id>
+    <url>https://central.sonatype.com/repository/maven-snapshots/</url>
+    <releases>
+      <enabled>false</enabled>
+    </releases>
+    <snapshots>
+      <enabled>true</enabled>
+    </snapshots>
+  </repository>
+</repositories>
+```
+
+**gradle:**
+```groovy
+repositories {
+  maven {
+    name = 'Central Portal Snapshots'
+    url = 'https://central.sonatype.com/repository/maven-snapshots/'
+
+    // Only search this repository for the specific dependency
+    content {
+      includeModule("<the snapshot's groupId>", "<the snapshot's artifactId>")
+    }
+  }
+  mavenCentral()
+}
+```
 
 ## 8、ssl 证书
 
