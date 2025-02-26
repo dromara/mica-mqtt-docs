@@ -4,6 +4,10 @@ icon: heart-pulse
 order: 4
 ---
 
+## 科普视频
+
+- [mqtt科普、mqttx、mica-mqtt的使用**视频**](https://www.bilibili.com/video/BV1wv4y1F7Av/)
+
 ## mqtt 心跳超时
 - 客户端默认心跳超时 60s
 - 服务端默认心跳检测 120s
