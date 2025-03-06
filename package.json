@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.20",
-    "@vuepress/plugin-notice": "2.0.0-rc.81",
+    "@vuepress/plugin-notice": "2.0.0-rc.82",
     "@vuepress/plugin-slimsearch": "2.0.0-rc.80",
     "sass-embedded": "^1.85.1",
     "vue": "^3.5.13",
