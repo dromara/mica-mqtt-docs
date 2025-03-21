@@ -128,7 +128,7 @@ public class MqttServerCustomizerConfiguration {
 ```java
 @Component
 public class ServerService {
-   @Autowired
+   @Inject
    private MqttServerTemplate server;
 
    public boolean publish(String body) {
@@ -139,7 +139,7 @@ public class ServerService {
 ```
 
 ### 2.6 客户端上下线监听
-使用 Solon event 解耦客户端上下线监听，注意：会跟自定义的 `IMqttConnectStatusListener` 实现冲突，取一即可。
+使用 Solon event 解耦客户端上下线监听，注意：会跟自定义的 `IMqttConnectStatusListener` 实现冲突，取一种即可。
 
 ```java
 @Component
