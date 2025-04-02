@@ -80,7 +80,6 @@ MqttServer mqttServer = MqttServer.create()
             return false;
         }
     })
-    .debug() // 开启 debug 信息日志
     .start();
 
 // 发送给某个客户端
@@ -92,6 +91,8 @@ mqttServer.publishAll("/test/123", "mica最牛皮".getBytes(StandardCharsets.UTF
 // 停止服务
 mqttServer.stop();
 ```
+
+**注意：** 不要开启 `debug`，Android 上没有 `RuntimeMXBean` 会报错。
 
 ![Android启动效果](mica-mqtt-server-android.png)
 
