@@ -92,11 +92,23 @@ mqttServer.publishAll("/test/123", "mica最牛皮".getBytes(StandardCharsets.UTF
 mqttServer.stop();
 ```
 
-**注意：** 不要开启 `debug`，Android 上没有 `RuntimeMXBean` 会报错。
+**注意：** 2.4.4 之前版本请不要开启 `debug`，Android 上没有 `RuntimeMXBean` 会报错（2.4.4 已做兼容处理）。
 
 ![Android启动效果](mica-mqtt-server-android.png)
 
-#### 3. http 和 websocket 依赖：
+#### 3. 启用混淆，需添加如下配置
+
+```text
+-dontwarn cn.hutool.json.**
+-dontwarn com.alibaba.fastjson.**
+-dontwarn com.alibaba.fastjson2.**
+-dontwarn com.fasterxml.jackson.**
+-dontwarn com.google.gson.**
+-dontwarn org.noear.snack.**
+-dontwarn java.lang.management.**
+```
+
+#### 4. http 和 websocket 依赖（2.4.3 以前版本需要该步骤）：
 
 开启 http 或 websocket 需要添加 mica-net-http 依赖，如果不需要 http、websocket 把它们可以使用 `.httpEnable(false)` 和 `.websocketEnable(false)` 关掉就不需要该依赖了。
 
@@ -109,5 +121,4 @@ implementation 'net.dreamlu:mica-net-http:$micaNetVersion'
 ![img.png](img.png)
 
 另外 http api 需要项目带有 jackson、fastjson、fastjson2、gson、hutool-json、snack3（mica-mqtt 2.3.4开始支持） 这些json工具其一。
-
 
