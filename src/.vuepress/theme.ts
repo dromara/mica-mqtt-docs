@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.4.3 发布',
-      content: 'mica-mqtt 2.4.3 发布，mqtt client 添加 heartbeat 模式和策略',
+      title: 'mica-mqtt 2.4.4 发布',
+      content: 'mica-mqtt 2.4.4 发布，mica-mqtt-server 更好的兼容 Android',
       actions: [
         {
           text: '立即查看',
