@@ -3,6 +3,14 @@ title: mica-mqtt 发行版本
 icon: tag
 ---
 
+### v2.4.5 - 2025-05-06
+- :sparkles: mica-mqtt-client-spring-boot-starter 的 `@MqttClientSubscribe` 注解支持自定义反序列化。
+- :sparkles: 优化代码 Spring Boot Client 可以自定义 MqttClientSubscribeDetector github #90 感谢 `@galaxy-sea` 贡献
+- :sparkles: 升级 mica-net 到 1.1.6，解决 eclipse paho mqtt websocket client 连接 mica-mqtt server 报错
+- :sparkles: 依赖调整，减少 example 示例项目的安全提示
+- :bug: 解决服务端重启时 client有消息发送，导致 client 无法正常重连 gitee #IC4DWT 感谢 `@wtjperi2003` 反馈
+- :bug: 同步 netty mqtt codec Fix the assignment error of maxQoS parameter in ConnAck Properties
+
 ### v2.4.4 - 2025-04-13
 - :sparkles: mica-mqtt-server，更好的兼容 Android 环境。github #81 感谢 `@KittenBall` 的联调测试。
 
