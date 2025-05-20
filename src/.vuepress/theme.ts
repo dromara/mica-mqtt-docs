@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.4.5 发布',
-      content: 'mica-mqtt-client-spring-boot-starter 的 `@MqttClientSubscribe` 注解支持自定义反序列化。',
+      title: 'mica-mqtt 2.4.6 发布',
+      content: '1. mica-mqtt-client-spring-boot-starter 注解支持反序列化支持泛型。</br> 2. solon 插件支持指标和注解订阅序列化',
       actions: [
         {
           text: '立即查看',
