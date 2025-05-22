@@ -16,7 +16,7 @@ title: 常见问题汇总
 - **大量消息，业务处理不赢**会导致解码异常，服务端可设置 `useQueueDecode(true)` 1.3.7 会默认成 true。不过业务一直处理不赢还是会照成更严重的问题。最后队列占满导致 jvm 内存溢出。建议集群并对接 kafka、rocketmq 等。
 
 ## 3、NoSuchMethodError: java.nio.ByteBuffer.XXX(I)Ljava/nio/ByteBuffer;
-**存在此问题的版本**：`1.0.0`、`1.0.0-RC`、`1.0.3`、`1.0.4`
+**存在此问题的版本**：`1.0.0`、`1.0.0-RC`、`1.0.3`、`1.0.4`、`2.4.5`
 该问题主要是 jar 编译问题，由于 JDK9+ 改了 ByteBuffer 部分返回值的类型，导致 java9+ 下编译的 jar 在 java8 下运行会有问题。如果遇到此问题，请立刻反馈。
 
 ## 4、多个客户端使用相同 clientId 导致前者被踢下线（周期性上下线）
