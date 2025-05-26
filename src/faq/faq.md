@@ -237,3 +237,61 @@ com/github/benmanes/caffeine/cache/RemovalListener
 
 有问题请 gitee 提 issues，**github 的消息太多了也经常好几天才会注意到**，谢谢！
 
+## 十五、问题：拉取 maven 包很慢或拉不了?
+
+注意：如果在 IDEA 设置里指定了 settings.xml，下面两个方案可能会失效。（或者直接拿"腾讯云"或“华为云”或“阿里云” 的镜像仓库地址，按自己的习惯配置）
+
+* 腾讯云： https://mirrors.cloud.tencent.com/nexus/repository/maven-public/
+* 华为云：https://mirrors.huaweicloud.com/repository/maven/
+* 阿里云：https://maven.aliyun.com/repository/central （这是新地址，旧的不行）
+
+以下以腾讯配置示例。
+
+### 1、可以在项目的 pom.xml 添加 "腾讯" 的镜像仓库
+
+"阿里" 的仓库很难拉取到 solon 包，所以本案采用 "腾讯" 的镜像仓库进行加速
+
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--
+     使用时，可以项目的 pom.xml 里添加 repositories 内容
+     -->
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://mirrors.cloud.tencent.com/nexus/repository/maven-public/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+</project>
+```
+
+
+### 2、或者可以在 .m2/settings.xml 添加 "腾讯" 的镜像仓库
+
+开发工具如果可以为项目选择一个 settings.xml 的，可以选这个文件。
+
+```xml
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                          https://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <mirrors>
+    <mirror> 
+      <id>central</id> 
+      <url>https://mirrors.cloud.tencent.com/nexus/repository/maven-public/</url>
+      <mirrorOf>central</mirrorOf> 
+    </mirror>
+  </mirrors>
+  
+</settings>
+```
