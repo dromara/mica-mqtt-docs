@@ -3,6 +3,15 @@ title: mica-mqtt 发行版本
 icon: tag
 ---
 
+### v2.4.7 - 2025-06-02
+- :sparkles: mica-mqtt-client、mica-mqtt-server publish相关接口支持object发送 (github #98) 感谢 `@galaxy-sea` 贡献
+- :sparkles: mica-mqtt-client 调整 MqttClient#reconnect 策略，（gitee #IBY5LQ）感谢 `@拉风的CC` 反馈。
+- :sparkles: mica-mqtt-codec MqttCodecUtil#isTopicFilter 代码优化改为逆序循环
+- :sparkles: mica-mqtt-codec 代码优化详见： https://github.com/netty/netty/pull/15227
+- :sparkles: mica-net-http http api 响应头 name 不转换成小写
+- :wrench: mica-mqtt-common 更新 `module-info.java` 添加序列化模块
+- :bug: mica-net-utils DefaultThreadFactory 不应该共用。
+
 ### v2.4.6 - 2025-05-19
 - :sparkles: mica-mqtt-client-spring-boot-starter MqttDeserializer 接口重写，支持泛型调用 (github #95) 感谢 `@galaxy-sea` 贡献
 - :sparkles: mica-mqtt-client 批量订阅兼容 mqtt 3.1.1 部分 broker 只返回一个 reasonCode 的情况。感谢 `@Jacky` 反馈
