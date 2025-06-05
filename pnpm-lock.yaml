@@ -12,8 +12,8 @@ importers:
         specifier: 2.0.0-rc.23
         version: 2.0.0-rc.23(@types/node@22.15.29)(sass-embedded@1.89.1)
       '@vuepress/plugin-notice':
-        specifier: 2.0.0-rc.107
-        version: 2.0.0-rc.107(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.29)(sass-embedded@1.89.1))(vue@3.5.16))
+        specifier: 2.0.0-rc.108
+        version: 2.0.0-rc.108(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.29)(sass-embedded@1.89.1))(vue@3.5.16))
       '@vuepress/plugin-slimsearch':
         specifier: 2.0.0-rc.106
         version: 2.0.0-rc.106(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.29)(sass-embedded@1.89.1))(vue@3.5.16))
@@ -748,8 +748,8 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.23
 
-  '@vuepress/helper@2.0.0-rc.107':
-    resolution: {integrity: sha512-7rXsh4YyAN1pR3Lms15I4doHuoAzZwfvw/Q8Bxkgx6EPKOMroPqq0feVQ3/M1rg6RzjVey7wWDNn0re20pMvFQ==}
+  '@vuepress/helper@2.0.0-rc.108':
+    resolution: {integrity: sha512-x/ygqD++S2CQzTl/+JQ5Og6OJyeURqLvKoE8Dlsmjc7UM/rB+FvnOWMGexOrRjCwtRXncxZRddIg1bcWuREndg==}
     peerDependencies:
       vuepress: 2.0.0-rc.23
 
@@ -872,8 +872,8 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.23
 
-  '@vuepress/plugin-notice@2.0.0-rc.107':
-    resolution: {integrity: sha512-lpIM143LpITcn5L+NRVImCU5S9DHXizphQ1floZr/09o7dU81EWXX1luwLUfGJPCMQ7/PSmU34CzE/AoGT2GCw==}
+  '@vuepress/plugin-notice@2.0.0-rc.108':
+    resolution: {integrity: sha512-ziR6GDTkfFFqJuwrbYrfes/7q4C+Mo0heJokumc6Zv6l84N2OwtvaJ6fegk4fyJPWSTI1+6bykhqJJzTHJeviQ==}
     peerDependencies:
       vuepress: 2.0.0-rc.23
 
@@ -2803,7 +2803,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@vuepress/helper@2.0.0-rc.107(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.29)(sass-embedded@1.89.1))(vue@3.5.16))':
+  '@vuepress/helper@2.0.0-rc.108(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.29)(sass-embedded@1.89.1))(vue@3.5.16))':
     dependencies:
       '@vue/shared': 3.5.16
       '@vueuse/core': 13.3.0(vue@3.5.16)
@@ -3034,9 +3034,9 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@vuepress/plugin-notice@2.0.0-rc.107(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.29)(sass-embedded@1.89.1))(vue@3.5.16))':
+  '@vuepress/plugin-notice@2.0.0-rc.108(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.29)(sass-embedded@1.89.1))(vue@3.5.16))':
     dependencies:
-      '@vuepress/helper': 2.0.0-rc.107(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.29)(sass-embedded@1.89.1))(vue@3.5.16))
+      '@vuepress/helper': 2.0.0-rc.108(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.29)(sass-embedded@1.89.1))(vue@3.5.16))
       '@vueuse/core': 13.3.0(vue@3.5.16)
       chokidar: 3.6.0
       vue: 3.5.16
@@ -4168,7 +4168,7 @@ snapshots:
   vuepress-plugin-components@2.0.0-rc.89(sass-embedded@1.89.1)(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.29)(sass-embedded@1.89.1))(vue@3.5.16)):
     dependencies:
       '@stackblitz/sdk': 1.11.0
-      '@vuepress/helper': 2.0.0-rc.107(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.29)(sass-embedded@1.89.1))(vue@3.5.16))
+      '@vuepress/helper': 2.0.0-rc.108(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.29)(sass-embedded@1.89.1))(vue@3.5.16))
       '@vuepress/plugin-sass-palette': 2.0.0-rc.106(sass-embedded@1.89.1)(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.29)(sass-embedded@1.89.1))(vue@3.5.16))
       '@vueuse/core': 13.3.0(vue@3.5.16)
       balloon-css: 1.2.0
@@ -4189,7 +4189,7 @@ snapshots:
       '@mdit/plugin-plantuml': 0.20.0(markdown-it@14.1.0)
       '@mdit/plugin-uml': 0.20.0(markdown-it@14.1.0)
       '@types/markdown-it': 14.1.2
-      '@vuepress/helper': 2.0.0-rc.107(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.29)(sass-embedded@1.89.1))(vue@3.5.16))
+      '@vuepress/helper': 2.0.0-rc.108(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.29)(sass-embedded@1.89.1))(vue@3.5.16))
       '@vuepress/plugin-sass-palette': 2.0.0-rc.106(sass-embedded@1.89.1)(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.29)(sass-embedded@1.89.1))(vue@3.5.16))
       '@vueuse/core': 13.3.0(vue@3.5.16)
       balloon-css: 1.2.0
@@ -4205,7 +4205,7 @@ snapshots:
 
   vuepress-shared@2.0.0-rc.89(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.29)(sass-embedded@1.89.1))(vue@3.5.16)):
     dependencies:
-      '@vuepress/helper': 2.0.0-rc.107(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.29)(sass-embedded@1.89.1))(vue@3.5.16))
+      '@vuepress/helper': 2.0.0-rc.108(vuepress@2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.29)(sass-embedded@1.89.1))(vue@3.5.16))
       '@vueuse/core': 13.3.0(vue@3.5.16)
       vue: 3.5.16
       vuepress: 2.0.0-rc.23(@vuepress/bundler-vite@2.0.0-rc.23(@types/node@22.15.29)(sass-embedded@1.89.1))(vue@3.5.16)
