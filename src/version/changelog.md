@@ -7,6 +7,8 @@ icon: tag
 - :sparkles: mica-mqtt-client-spring-boot-starter `MqttClientSubscribeDetector` bean 配置改成 `static` 方法。
 - :sparkles: mica-mqtt-server 调整保留消息标志位的规则。
 
+注意：2.4.x 不会再新增功能，只做 bug 修复，新功能将会在 2.5.x 中进行。减轻老版本用户的升级成本。
+
 ### v2.4.7 - 2025-06-02
 - :sparkles: mica-mqtt-client、mica-mqtt-server publish相关接口支持object发送 (github #98) 感谢 `@galaxy-sea` 贡献
 - :sparkles: mica-mqtt-client 调整 MqttClient#reconnect 策略，（gitee #IBY5LQ）感谢 `@拉风的CC` 反馈。
