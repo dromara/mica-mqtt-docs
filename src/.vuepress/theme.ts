@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.4.7 发布',
-      content: '1. mica-mqtt client、server publish 接口支持 object 发送<br>2. mica-mqtt-client 调整 MqttClient#reconnect 策略',
+      title: 'mica-mqtt 2.4.8 发布',
+      content: 'mica-mqtt-server 调整保留消息标志位的规则',
       actions: [
         {
           text: '立即查看',
