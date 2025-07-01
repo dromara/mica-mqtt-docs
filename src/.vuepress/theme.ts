@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.4.8 发布',
-      content: 'mica-mqtt-server 调整保留消息标志位的规则',
+      title: 'mica-mqtt 2.4.9 发布',
+      content: ':bug: mqtt server 修复 http/ws 端口问题 gitee #ICID15',
       actions: [
         {
           text: '立即查看',
