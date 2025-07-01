@@ -4,7 +4,7 @@ icon: tag
 ---
 
 ### v2.4.9 - 2025-06-27
-- :bug: mqtt server 修复 gitee #ICID15
+- :bug: mqtt server 修复 http/ws 端口占用 gitee #ICID15
 
 ### v2.4.8 - 2025-06-20
 - :sparkles: mica-mqtt-client-spring-boot-starter `MqttClientSubscribeDetector` bean 配置改成 `static` 方法。
