@@ -93,6 +93,11 @@ export const zhSidebar = sidebar({
           icon: "h",
           link: "httpApi"
         },
+        {
+          text: "大模型 MCP",
+          icon: "h",
+          link: "mcp"
+        },
       ],
     }
   ],
