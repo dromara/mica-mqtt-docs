@@ -30,7 +30,16 @@ order: 2
 </dependency>
 ```
 
-#### 4. 插件配置
+#### 4. 插件配置（2.5.x或以上）
+```java
+MqttServerPlugin plugin = new MqttServerPlugin();
+plugin.config(mqttServerCreator -> {
+    // mqttServerCreator 上有很多方法，详见 mica-mqtt-core
+    mqttServerCreator.enableMqtt(1883).enableMqttWs();
+});
+```
+
+#### 4. 插件配置（2.4.x或以下）
 ```java
 MqttServerPlugin plugin = new MqttServerPlugin();
 plugin.config(mqttServerCreator -> {

@@ -3,6 +3,20 @@ title: mica-mqtt 发行版本
 icon: tag
 ---
 
+### v2.5.0 - 2025-07-12
+- :sparkles: mica-mqtt X AI，mica-mqtt-server 支持大模型 mcp
+- :sparkles: mica-mqtt-server 支持同时配置多协议支持，拆分 `http(默认端口18083)` 和 `websocket(默认端口8083)`，使统计更加准确
+- :sparkles: mica-mqtt-server spring、solon 插件删除不推荐使用的 `EventMqttMessageListener`
+- :sparkles: mica-mqtt-server 调整保留消息的规则，支持 `$retain` 带存储周期的保留消息 感谢 `@tan90` pr #ICB9I2 #23
+- :sparkles: mica-mqtt-client 删除 `IMqttClientMessageIdGenerator` 接口合入 `IMqttClientSession` 接口
+- :sparkles: mica-mqtt-client 默认 mqtt5.0，cleanSession 改为 cleanStart 感谢 `@tan90` 反馈 (gitee #IBKKAG)
+- :sparkles: mica-mqtt-client MqttClient 和 MqttClientTemplate 支持通过代理接口来进行Publish 感谢 `@galaxy-sea` pr (github #100)
+- :sparkles: mica-mqtt-codec 完全同步成私服版，将 MqttProperties 内部类拆解出来，方便使用
+- :sparkles: mica-mqtt client、server solon 插件添加对 [Solon IDEA](https://plugins.jetbrains.com/plugin/21380-solon) 插件配置提示支持。
+- :sparkles: 移除 mica-mqtt-broker，未来重构
+- :sparkles: 统一参数命名，userName 统一为 username。
+- :sparkles: 优化部分日志，使用中文，方便大家排查问题
+
 ### v2.4.9 - 2025-06-27
 - :bug: mqtt server 修复 http/ws 端口占用 gitee #ICID15
 

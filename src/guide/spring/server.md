@@ -26,7 +26,61 @@ order: 2
 
 ## 二、mqtt 服务
 
-### 2.1 配置项
+
+### 2.1 配置项（2.5.x或以上）
+
+```yaml
+# mqtt 服务端配置
+mqtt:
+  server:
+    enabled: true               # 是否开启服务端，默认：true
+    name: Mica-Mqtt-Server      # 名称，默认：Mica-Mqtt-Server
+    heartbeat-timeout: 120000   # 心跳超时，单位毫秒，默认: 1000 * 120
+    read-buffer-size: 8KB       # 接收数据的 buffer size，默认：8k
+    max-bytes-in-message: 10MB  # 消息解析最大 bytes 长度，默认：10M
+    auth:
+      enable: false             # 是否开启 mqtt 认证
+      username: mica            # mqtt 认证用户名
+      password: mica            # mqtt 认证密码
+    debug: true                 # 如果开启 prometheus 指标收集建议关闭
+    stat-enable: true           # 开启指标收集，debug 和 prometheus 开启时需要打开，默认开启，关闭节省内存
+    mqtt-listener:              # mqtt 监听器
+      enable: true              # 是否开启，默认：false
+#      ip: "0.0.0.0"            # 服务端 ip 默认为空，0.0.0.0，建议不要设置
+      port: 1883                # 端口，默认：1883
+    mqtt-ssl-listener:          # mqtt ssl 监听器
+      enable: false             # 是否开启，默认：false
+      port: 8883                # 端口，默认：8883
+      ssl:                      # ssl 配置，必须
+        keystore-path:          # 必须参数：ssl keystore 目录，支持 classpath:/ 路径。
+        keystore-pass:          # 必选参数：ssl keystore 密码
+        truststore-path:        # 可选参数：ssl 双向认证 truststore 目录，支持 classpath:/ 路径。
+        truststore-pass:        # 可选参数：ssl 双向认证 truststore 密码
+        client-auth: none       # 是否需要客户端认证（双向认证），默认：NONE（不需要）
+    ws-listener:                # websocket mqtt 监听器
+      enable: true              # 是否开启，默认：false
+      port: 8083                # websocket 端口，默认：8083
+    wss-listener:               # websocket ssl mqtt 监听器
+      enable: false             # 是否开启，默认：false
+      port: 8084                # 端口，默认：8084
+      ssl:                      # ssl 配置，必须
+        keystore-path:          # 必须参数：ssl keystore 目录，支持 classpath:/ 路径。
+        keystore-pass:          # 必选参数：ssl keystore 密码
+        truststore-path:        # 可选参数：ssl 双向认证 truststore 目录，支持 classpath:/ 路径。
+        truststore-pass:        # 可选参数：ssl 双向认证 truststore 密码
+        client-auth: none       # 是否需要客户端认证（双向认证），默认：NONE（不需要）
+    http-listener:
+      enable: true
+      port: 18083
+      basic-auth:               # 基础认证
+        enable: true
+        username: mica
+        password: mica
+      mcp-server:               # 大模型 mcp
+        enable: true
+```
+
+### 2.1 配置项（2.4.x或以下）
 
 ```yaml
 mqtt:

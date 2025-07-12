@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.4.9 发布',
-      content: '🐛 mqtt server 修复 http/ws 端口占用 gitee #ICID15',
+      title: 'mica-mqtt 2.5.0 发布',
+      content: 'mica-mqtt X AI，mqtt server 支持大模型 mcp',
       actions: [
         {
           text: '立即查看',

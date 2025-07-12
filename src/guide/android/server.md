@@ -27,7 +27,52 @@ android {
 }
 ```
 
-#### 3. 服务端使用
+#### 3. 服务端使用（2.5.x或以上）
+
+```java
+// 注意：为了能接受更多链接（降低内存），请添加 jvm 参数 -Xss129k
+MqttServer mqttServer = MqttServer.create()
+    // 服务端 ip 默认为空，0.0.0.0，建议不要设置，端口 默认：1883
+    .enableMqtt(1883)
+    // 默认为： 8192（mqtt 默认最大消息大小），为了降低内存可以减小小此参数，如果消息过大 t-io 会尝试解析多次（建议根据实际业务情况而定）
+    .readBufferSize(8192)
+//  最大包体长度
+//  .maxBytesInMessage(1024 * 100)
+//  mqtt 3.1 协议会校验 clientId 长度。
+//  .maxClientIdLength(64)
+    .messageListener((context, clientId, topic, qos, message) -> {
+        logger.info("clientId:{} payload:{}", clientId, new String(message.payload(), StandardCharsets.UTF_8));
+    })
+    // 客户端连接状态监听
+    .connectStatusListener(new MqttConnectStatusListener())
+    // 自定义消息拦截器
+    .addInterceptor(new MqttMessageInterceptor())
+    // 开启 websocket
+    .enableMqttWs()
+    // 开启 mqtt http 接口
+    .enableMqttHttpApi(builder ->
+        builder
+            .basicAuth("mica", "mica") // http basic 认证
+            .mcpServer()               // 开启 mcp 服务
+            .build()
+    )
+    // 开始 stat 监控
+    .statEnable()
+    // 开启 debug 信息日志
+    .debug()
+    .start();
+
+// 定时下发消息
+mqttServer.schedule(() -> {
+    String message = "mica最牛皮 " + System.currentTimeMillis();
+    mqttServer.publishAll("/test/123", message.getBytes(StandardCharsets.UTF_8));
+}, 2000);
+
+// 2.3.2 开始支持 stop 关闭
+// mqttServer.stop();
+```
+
+#### 3. 服务端使用（2.4.x或以下）
 ```java
 // 注意：为了能接受更多链接（降低内存），请添加 jvm 参数 -Xss129k
 MqttServer mqttServer = MqttServer.create()
