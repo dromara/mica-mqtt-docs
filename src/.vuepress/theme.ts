@@ -4,11 +4,11 @@ import { zhNavbar } from "./navbar/index.js";
 import { zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
-  hostname: "https://mica-mqtt.dromara.org",
+  hostname: "https://mica-mqtt.dreamlu.net",
 
   author: {
-    name: "mica-mqtt@dromara.org",
-    url: "https://dromara.org",
+    name: "如梦技术",
+    url: "https://mica-mqtt.dreamlu.net",
   },
 
   logo: "logo.png",
