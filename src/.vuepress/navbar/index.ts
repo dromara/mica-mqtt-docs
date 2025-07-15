@@ -116,10 +116,5 @@ export const zhNavbar = navbar([
         link: "update"
       }
     ]
-  },
-  {
-    text: "PIG AI（mica-mqtt技术手册）",
-    icon: "robot",
-    link: "https://home.pig4cloud.com:38443/bot/index.html#/0/1809133293843144705/chat/1729581143528"
-  },
+  }
 ]);
