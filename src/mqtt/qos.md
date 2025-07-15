@@ -4,6 +4,11 @@ icon: spinner
 order: 6
 ---
 
+## 科普视频
+
+- [mqtt科普、mqttx、mica-mqtt的使用**视频**](https://www.bilibili.com/video/BV1wv4y1F7Av/)
+
+## mqtt 消息质量 QoS
 
 在MQTT协议中，选择合适的QoS（服务质量）等级取决于数据上报的具体场景和需求。以下是针对不同QoS等级的分析和建议：
 

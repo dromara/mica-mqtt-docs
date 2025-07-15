@@ -4,6 +4,10 @@ icon: inbox
 order: 3
 ---
 
+## 科普视频
+
+- [mqtt科普、mqttx、mica-mqtt的使用**视频**](https://www.bilibili.com/video/BV1wv4y1F7Av/)
+
 ## MQTT 保留消息场景
 
 - 例如，某设备定期发布自身 GPS 坐标，但对于订阅者而言，从它发起订阅到第一次收到数据可能需要几秒钟，也可能需要十几分钟甚至更多，这样并不友好。因此 MQTT 引入了保留消息。
