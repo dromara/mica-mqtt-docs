@@ -3,6 +3,15 @@ title: mica-mqtt 发行版本
 icon: tag
 ---
 
+### v2.5.2 - 2025-07-27
+- :bug: mica-mqtt-server 修复启动报错，感谢 `CoderKK` 反馈（gitee #ICOQ3Q）
+
+### v2.5.1 - 2025-07-24
+- :sparkles: mica-mqtt-server 优化 sse mcp，添加 sse 心跳
+- :sparkles: mica-mqtt-client 内置 ssl SNI 支持，感谢 `sword007`、`@TomatoLay` 反馈（gitee #ICKBAY #ICEANP）
+- :sparkles: mica-mqtt-client 支持多网卡下指定网卡 `bindIp`（网卡对应IP）和 `bindNetworkInterface`（网卡名） 配置（2个方法使用任意一个即可）。感谢 `@iovera` 反馈（gitee #ICO699)
+- :bug: mica-mqtt-client 高CPU下 packetId 生成超限，感谢 `@火焰之魂` 反馈（gitee #ICLXC3）
+
 ### v2.5.0 - 2025-07-12
 - :sparkles: mica-mqtt X AI，mica-mqtt-server 支持大模型 mcp
 - :sparkles: mica-mqtt-server 支持同时配置多协议支持，拆分 `http(默认端口18083)` 和 `websocket(默认端口8083)`，使统计更加准确

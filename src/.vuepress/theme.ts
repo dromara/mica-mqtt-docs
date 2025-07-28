@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.5.0 发布',
-      content: 'mica-mqtt X AI，mqtt server 支持大模型 mcp',
+      title: 'mica-mqtt 2.5.2 发布',
+      content: 'mica-mqtt-server 修复启动报错',
       actions: [
         {
           text: '立即查看',
