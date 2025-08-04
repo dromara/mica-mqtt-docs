@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.5.2 发布',
-      content: 'mica-mqtt-server 修复启动报错',
+      title: 'mica-mqtt 2.5.3 发布',
+      content: 'mica-mqtt-server `spring-boot` 和 `solon` 插件支持 `@MqttServerFunction` 注解监听',
       actions: [
         {
           text: '立即查看',
