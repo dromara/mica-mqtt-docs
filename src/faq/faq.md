@@ -247,9 +247,9 @@ com/github/benmanes/caffeine/cache/RemovalListener
 
 以下以腾讯配置示例。
 
-### 1、可以在项目的 pom.xml 添加 "腾讯" 的镜像仓库
+***1、可以在项目的 pom.xml 添加 "腾讯" 的镜像仓库***
 
-"阿里" 的仓库很难拉取到 solon 包，所以本案采用 "腾讯" 的镜像仓库进行加速
+"阿里" 的仓库很难拉取到最新版本的 mica-mqtt 包，所以本案采用 "腾讯" 的镜像仓库进行加速
 
 
 ```xml
@@ -276,7 +276,7 @@ com/github/benmanes/caffeine/cache/RemovalListener
 ```
 
 
-### 2、或者可以在 .m2/settings.xml 添加 "腾讯" 的镜像仓库
+***2、或者可以在 .m2/settings.xml 添加 "腾讯" 的镜像仓库***
 
 开发工具如果可以为项目选择一个 settings.xml 的，可以选这个文件。
 
