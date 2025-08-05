@@ -1,4 +1,5 @@
 import { defineUserConfig } from "vuepress";
+import { llmsPlugin } from '@vuepress/plugin-llms'
 import theme from "./theme.js";
 
 export default defineUserConfig({
@@ -14,4 +15,10 @@ export default defineUserConfig({
 
   theme,
 
+  plugins: [
+    llmsPlugin({
+      llmsTxt: true,
+      llmsFullTxt: true
+    }),
+  ],
 });
