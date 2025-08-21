@@ -1,6 +1,8 @@
 ---
 url: /guide/httpApi.md
 ---
+**注意：** 从 mica-mqtt 2.5.x 开始默认的 http api 端口由 ~~8083~~ 改为了 `18083`。
+
 ### HTTP 状态码 (status codes)
 
 接口在调用成功时总是返回 200 OK，响应内容则以 JSON 格式返回。
@@ -47,7 +49,7 @@ url: /guide/httpApi.md
 **Examples:**
 
 ```bash
-$ curl -i --basic -u mica:mica "http://localhost:8083/api/v1/endpoints"
+$ curl -i --basic -u mica:mica "http://localhost:18083/api/v1/endpoints"
 
 {
     "data": [
@@ -130,7 +132,7 @@ $ curl -i --basic -u mica:mica "http://localhost:8083/api/v1/endpoints"
 **Examples:**
 
 ```bash
-$ curl -i --basic -u mica:mica -X POST "http://localhost:8083/api/v1/mqtt/publish" -d '{"topic":"a/b/c","payload":"Hello World","qos":1,"retain":false,"clientId":"example"}'
+$ curl -i --basic -u mica:mica -X POST "http://localhost:18083/api/v1/mqtt/publish" -d '{"topic":"a/b/c","payload":"Hello World","qos":1,"retain":false,"clientId":"example"}'
 
 {"code":1}
 ```
@@ -160,7 +162,7 @@ $ curl -i --basic -u mica:mica -X POST "http://localhost:8083/api/v1/mqtt/publis
 同时订阅 `a`, `b`, `c` 三个主题
 
 ```bash
-$ curl -i --basic -u mica:mica -X POST "http://localhost:8083/api/v1/mqtt/subscribe" -d '{"topic":"a/b/c","qos":1,"clientId":"example"}'
+$ curl -i --basic -u mica:mica -X POST "http://localhost:18083/api/v1/mqtt/subscribe" -d '{"topic":"a/b/c","qos":1,"clientId":"example"}'
 
 {"code":1}
 ```
@@ -187,7 +189,7 @@ $ curl -i --basic -u mica:mica -X POST "http://localhost:8083/api/v1/mqtt/subscr
 取消订阅 `a` 主题
 
 ```bash
-$ curl -i --basic -u mica:mica -X POST "http://localhost:8083/api/v1/mqtt/unsubscribe" -d '{"topic":"a","clientId":"example"}'
+$ curl -i --basic -u mica:mica -X POST "http://localhost:18083/api/v1/mqtt/unsubscribe" -d '{"topic":"a","clientId":"example"}'
 
 {"code":1}
 ```
@@ -218,7 +220,7 @@ $ curl -i --basic -u mica:mica -X POST "http://localhost:8083/api/v1/mqtt/unsubs
 **Examples:**
 
 ```bash
-$ curl -i --basic -u mica:mica -X POST "http://localhost:8083/api/v1/mqtt/publish/batch" -d '[{"topic":"a/b/c","payload":"Hello World","qos":1,"retain":false,"clientId":"example"},{"topic":"a/b/c","payload":"Hello World Again","qos":0,"retain":false,"clientId":"example"}]'
+$ curl -i --basic -u mica:mica -X POST "http://localhost:18083/api/v1/mqtt/publish/batch" -d '[{"topic":"a/b/c","payload":"Hello World","qos":1,"retain":false,"clientId":"example"},{"topic":"a/b/c","payload":"Hello World Again","qos":0,"retain":false,"clientId":"example"}]'
 
 {"code":1}
 ```
@@ -248,7 +250,7 @@ $ curl -i --basic -u mica:mica -X POST "http://localhost:8083/api/v1/mqtt/publis
 一次性订阅 `a`, `b`, `c` 三个主题
 
 ```bash
-$ curl -i --basic -u mica:mica -X POST "http://localhost:8083/api/v1/mqtt/subscribe/batch" -d '[{"topic":"a","qos":1,"clientId":"example"},{"topic":"b","qos":1,"clientId":"example"},{"topic":"c","qos":1,"clientId":"example"}]'
+$ curl -i --basic -u mica:mica -X POST "http://localhost:18083/api/v1/mqtt/subscribe/batch" -d '[{"topic":"a","qos":1,"clientId":"example"},{"topic":"b","qos":1,"clientId":"example"},{"topic":"c","qos":1,"clientId":"example"}]'
 
 {"code":1}
 ```
@@ -275,7 +277,7 @@ $ curl -i --basic -u mica:mica -X POST "http://localhost:8083/api/v1/mqtt/subscr
 一次性取消订阅 `a`, `b` 主题
 
 ```bash
-$ curl -i --basic -u mica:mica -X POST "http://localhost:8083/api/v1/mqtt/unsubscribe/batch" -d '[{"topic":"a","clientId":"example"},{"topic":"b","clientId":"example"}]'
+$ curl -i --basic -u mica:mica -X POST "http://localhost:18083/api/v1/mqtt/unsubscribe/batch" -d '[{"topic":"a","clientId":"example"},{"topic":"b","clientId":"example"}]'
 
 {"code":1}
 ```
@@ -304,7 +306,7 @@ $ curl -i --basic -u mica:mica -X POST "http://localhost:8083/api/v1/mqtt/unsubs
 **Examples:**
 
 ```bash
-$ curl -i --basic -u mica:mica -X POST "http://localhost:8083/api/v1/clients/info?clientId=mqttx_5fe4cfcf"
+$ curl -i --basic -u mica:mica -X POST "http://localhost:18083/api/v1/clients/info?clientId=mqttx_5fe4cfcf"
 
 {"code":1,"data":{"clientId":"mqttx_5fe4cfcf","connected":true,"connectedAt":1681792417835,"createdAt":1681792417835,"ipAddress":"127.0.0.1","port":11852,"protoName":"MQTT","protoVer":5}}
 ```
@@ -343,7 +345,7 @@ $ curl -i --basic -u mica:mica -X POST "http://localhost:8083/api/v1/clients/inf
 **Examples:**
 
 ```bash
-$ curl -i --basic -u mica:mica -X POST "http://localhost:8083/api/v1/clients?_page=1&_limit=100"
+$ curl -i --basic -u mica:mica -X POST "http://localhost:18083/api/v1/clients?_page=1&_limit=100"
 
 {"data":{"list":[{"clientId":"mqttx_5fe4cfcf","connected":true,"protoName":"MQTT","protoVer":5,"ipAddress":"127.0.0.1","port":11852,"connectedAt":1681792417835,"createdAt":1681792417835}],"pageNumber":1,"pageSize":1,"totalRow":1},"code":1}
 ```
@@ -371,7 +373,7 @@ $ curl -i --basic -u mica:mica -X POST "http://localhost:8083/api/v1/clients?_pa
 由于客户端可能会重连，所以还会连上了。如果需要永久踢出需要自行开发黑名单。
 
 ```bash
-$ curl -i --basic -u mica:mica -X POST "http://localhost:8083/api/v1/clients/delete?clientId=123"
+$ curl -i --basic -u mica:mica -X POST "http://localhost:18083/api/v1/clients/delete?clientId=123"
 
 {"code":1}
 ```
