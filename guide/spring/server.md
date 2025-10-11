@@ -9,7 +9,7 @@ url: /guide/spring/server.md
 
 | 要求  | Spring boot 版本 |
 |-----|----------------|
-| 最高  | 3.x            |
+| 最高  | 4.x            |
 | 最低  | 2.1.0.RELEASE  |
 
 ## 一、添加依赖
