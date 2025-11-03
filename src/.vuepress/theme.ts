@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.5.5 发布',
-      content: '支持 jackson3，更好的适配 Spring boot 4！',
+      title: 'mica-mqtt 2.5.6 发布',
+      content: 'bug修复，建议升级！',
       actions: [
         {
           text: '立即查看',
