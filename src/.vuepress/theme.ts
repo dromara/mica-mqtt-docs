@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.5.7 发布',
-      content: 'mqtt-client 优化大批量发送的性能！',
+      title: 'mica-mqtt 2.5.9 发布',
+      content: 'mica mqtt starter 支持 Spring boot 4.x！',
       actions: [
         {
           text: '立即查看',
