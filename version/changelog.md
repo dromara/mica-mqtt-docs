@@ -1,6 +1,14 @@
 ---
 url: /version/changelog.md
 ---
+### v2.5.10 - 2025-12-20
+
+* ✨ mica-mqtt-client 支持使用 MqttSubscriptionOption 进行订阅配置 感谢 `@rocker-cheng` 反馈（gitee #IDB1DN）
+* ✨ mica-mqtt-codec 优化 MQTT 消息解码代码结构，编解码逻辑，减少不必要的对象创建，提升内存使用效率。
+* 🔧 移除不必要的 @org.springframework.lang.NonNull 注解，spring7 已移除。
+* 🐛 修复 UnSubAck 消息中的取消订阅原因码应该为单字节。
+* ⬆️ 升级到 mica-net 1.2.6，JsonUtil 添加 isValidJson 和 readMap 系列方法。
+
 ### v2.5.9 - 2025-11-29
 
 * :sparkles: mica-mqtt-client solon 和 spring 插件 MQTT 客户端订阅中的 beanName 支持占位符解析，感谢 `@tan90` 反馈（gitee #ID7PF6）
