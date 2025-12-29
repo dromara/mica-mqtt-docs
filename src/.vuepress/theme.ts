@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.5.10 发布',
-      content: 'mica-mqtt 2.5.10 发布，mica-mqtt-client 支持订阅配置！',
+      title: 'mica-mqtt 2.5.11 发布',
+      content: 'mica-mqtt 2.5.11 发布，重构 topic 参数变量提取，优化编解码！',
       actions: [
         {
           text: '立即查看',
