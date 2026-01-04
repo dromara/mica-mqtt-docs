@@ -28,7 +28,7 @@ title: 常见问题汇总
 
 检查 emqx 配置，调整或关闭“强制关闭”的相关配置。
 
-![输入图片说明](./emqx_reconn.png)
+![输入图片说明](./emqx_reconn.png "emqx 重连配置")
 
 ## 6、nginx tcp 负载均衡
 #### 6.1 搜索关键词 `nginx tcp 负载均衡` 即可：
@@ -240,9 +240,9 @@ com/github/benmanes/caffeine/cache/RemovalListener
 
 ## 15、结合 emqx 监听消费 qos1 或 qos2 消息被丢弃
 
-适当调整会话消息队列长度
+适当调整会话消息队列长度，按消息流入速率适当调整（建议流入的 1.5 到 2 倍），默认 1000。
 
-![输入图片说明](./emqx_session.png)
+![输入图片说明](./emqx_session.png "会话消息队列长度")
 
 
 ## 16、问题：拉取 maven 包很慢或拉不了?
