@@ -23,18 +23,24 @@ url: /faq/faq.md
 
 ## 4、多个客户端使用相同 clientId 导致前者被踢下线（周期性上下线）
 
-* 多个客户端相同 clientId 互踢日志关键字 **准备关闭连接 ... now bind on new context id:\[xxxx]**
+* 日志关键字 **准备关闭连接 ... now bind on new context id:\[xxxx]**
 * clientId 对于在 mqtt 中起着十分重要的作用，请不要随意设置，建议按照产品、设备、sn等维度生成，并且**确保唯一**。
 * 如果实在是要兼容老业务，可以实现 `IMqttServerUniqueIdService` (1.1.4开始支持) 接口，返回的 `uniqueId` 会替代 clientId，后续的场景也是需要使用这个 `uniqueId` 来处理。
 
-## 5、nginx tcp 负载均衡
+## 5、结合 emqx 监听消费，高压下重连
 
-#### 5.1 搜索关键词 `nginx tcp 负载均衡` 即可：
+检查 emqx 配置，调整或关闭“强制关闭”的相关配置。
+
+![输入图片说明](./emqx_reconn.png)
+
+## 6、nginx tcp 负载均衡
+
+#### 6.1 搜索关键词 `nginx tcp 负载均衡` 即可：
 
 * https://zhuanlan.zhihu.com/p/139275668
 * http://nginx.org/en/docs/stream/ngx\_stream\_proxy\_module.html
 
-#### 5.2 配置 /etc/nginx/nginx.conf，示例:
+#### 6.2 配置 /etc/nginx/nginx.conf，示例:
 
 ```
 stream {
@@ -58,13 +64,13 @@ stream {
 }
 ```
 
-## 6、Mqtt 集群
+## 7、Mqtt 集群
 
 mica-mqtt 1.1.2 版本开始添加了 `mica-mqtt-broker` 模块，采用 redis pub/sub 实现集群，有需求的朋友可以参考。
 
-## 7、SNAPSHOT 版本使用（central sonatype 快照版仅仅存储 90 天，如果有使用需要尽快切到最新的正式版）
+## 8、SNAPSHOT 版本使用（central sonatype 快照版仅仅存储 90 天，如果有使用需要尽快切到最新的正式版）
 
-**snapshots** 版本会及时响应修复最新的 bug 和需求，dev 分支提交后 Github Action 会自动构建、发布。
+**snapshots** 版本会及时响应修复最新的 bug 和需求。
 
 **maven:**
 
@@ -101,7 +107,7 @@ repositories {
 }
 ```
 
-## 8、ssl 证书
+## 9、ssl 证书
 
 **注意**：mica-mqtt 从 v2.3.9 开始支持 PKCS12 证书，mica-mqtt 支持 JKS 和 PKCS12 证书，根据后缀判断。`.jks, .keystore` 文件后缀会识别成为 `JKS` 证书，`.p12 和 .pfx` 会识别成 `PKCS12` 证书。其他默认成 JKS。
 
@@ -109,7 +115,7 @@ repositories {
 
 ```xml
 <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
+        <groupId>org.apache.maven.plugins</groupId>
 	<artifactId>maven-resources-plugin</artifactId>
 	<configuration>
 		<nonFilteredFileExtensions>
@@ -120,12 +126,12 @@ repositories {
 </plugin>
 ```
 
-### 8.1 申请的证书
+### 9.1 申请的证书
 
 腾讯云、阿里云等提供有 jks 证书，直接申请下载，记住申请时的密码：
 代码中 `.useSsl("classpath:xxx.jks", "classpath:xxx.jks", "密码")` 即可
 
-### 8.2 自签证书（双向认证）
+### 9.2 自签证书（双向认证）
 
 1. 按这个文章生成服务端和客户端证书：https://www.toolhelper.cn/SSL/SSLGenerate 点击下载，解压，拷贝 `generate.pfx` 到项目。
 2. 服务端使用 `.useSsl("classpath:generate.pfx", "密码")` 开启 ssl。（v2.3.9 开始支持 .pfx 和 .p12 后缀）
@@ -137,11 +143,11 @@ repositories {
 
 更多教程：openssl自签名证书教程(单域名证书/泛域名证书/多域名证书)详见：https://www.orcy.net.cn/340.html
 
-## 9、服务器配置调优
+## 10、服务器配置调优
 
 详见: [**Linux 操作系统参数和TCP 协议栈网络参数**章节](https://www.emqx.io/docs/zh/v3.0/tune.html#linux-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8F%82%E6%95%B0)
 
-## 10、Mqtt client 动态更新 clientId，username，password
+## 11、Mqtt client 动态更新 clientId，username，password
 
 ```java
 /**
@@ -179,7 +185,7 @@ public class MqttClientConnectListener implements IMqttClientConnectListener {
 }
 ```
 
-## 11、浏览器 mqtt.js websocket 连接
+## 12、浏览器 mqtt.js websocket 连接
 
 **科普**：浏览器只能走 websocket mqtt 子协议，对应 mica-mqtt **8083** 端口。
 
@@ -228,7 +234,7 @@ client.on('reconnect', () => {
 })
 ```
 
-## 十二、mqtt 心跳超时
+## 13、mqtt 心跳超时
 
 * 客户端默认心跳超时 60s
 * 服务端默认心跳检测 120s
@@ -236,9 +242,9 @@ client.on('reconnect', () => {
 
 **拔网线**等**非正常断开**需要一个心跳检测周期才会触发断开。
 
-对于设备可以监听到下电可以发送 logout topic （子设备）或者 mqtt disconnect 下线指令（直连设备）
+如果设备可以监听到下电，可以发送 logout topic （子设备）或者 mqtt disconnect 下线指令（直连设备）可使设备状态更加准确。
 
-## 十三、client、server 同时使用时 caffeine 依赖异常（v）
+## 14、client、server 同时使用时 caffeine 依赖异常（v）
 
 ```java
 Failed to instantiate [net.dreamlu.iot.mqtt.core.server.MqttServer]: Factory method 'mqttServer' threw 
@@ -248,13 +254,13 @@ com/github/benmanes/caffeine/cache/RemovalListener
 
 **解决方案：** pom 中将 mqtt server 依赖放 mqtt client 前面。
 
-## 十四、为什么群 突然解散了?
+## 15、结合 emqx 监听消费 qos1 或 qos2 消息被丢弃
 
-群没啥意义，没啥有用的反馈和意见，git issues 能记录问题，百度权重也很高。
+适当调整会话消息队列长度
 
-有问题请 gitee 提 issues，**github 的消息太多了也经常好几天才会注意到**，谢谢！
+![输入图片说明](./emqx_session.png)
 
-## 十五、问题：拉取 maven 包很慢或拉不了?
+## 16、问题：拉取 maven 包很慢或拉不了?
 
 注意：如果在 IDEA 设置里指定了 settings.xml，下面两个方案可能会失效。（或者直接拿"腾讯云"或“华为云”或“阿里云” 的镜像仓库地址，按自己的习惯配置）
 
@@ -310,3 +316,9 @@ com/github/benmanes/caffeine/cache/RemovalListener
   
 </settings>
 ```
+
+## 17、为什么群 突然解散了?
+
+群没啥意义，没啥有用的反馈和意见，git issues 能记录问题，百度权重也很高。
+
+有问题请 gitee 提 issues，**github 的消息太多了也经常好几天才会注意到**，谢谢！
