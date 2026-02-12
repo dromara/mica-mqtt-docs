@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.5.11 发布',
-      content: 'mica-mqtt 2.5.11 发布，重构 topic 参数变量提取，优化编解码！',
+      title: 'mica-mqtt 2.5.12 发布',
+      content: 'mica-mqtt 2.5.11 发布，Solon 和 Spring Boot 添加线程池大小配置',
       actions: [
         {
           text: '立即查看',
