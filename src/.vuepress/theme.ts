@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.6.0 发布',
-      content: 'mica-mqtt 2.6.0 发布，服务端完善 mqtt 5.0 支持',
+      title: 'mica-mqtt 2.6.1 发布',
+      content: 'mica-mqtt 2.6.1 发布，重构 mica-mqtt-broker 模块，提供原生集群能力',
       actions: [
         {
           text: '立即查看',
