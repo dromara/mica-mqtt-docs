@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.6.2 发布',
-      content: 'mica-mqtt 2.6.2 发布，迁移 mica-net 包避免跟原版 t-io 包冲突',
+      title: 'mica-mqtt 2.6.3 发布',
+      content: 'mica-mqtt 2.6.3 发布，mica-mqtt-client 连接前或重连阶段待消息暂存到队列（默认10条），连接成功后会自动发送',
       actions: [
         {
           text: '立即查看',
