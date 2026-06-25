@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.6.4 发布',
-      content: 'mica-mqtt 2.6.4 发布，修复 solon 插件初始化问题，提升兼容性',
+      title: 'mica-mqtt 2.6.6 发布',
+      content: 'mica-mqtt 2.6.6 发布，修复 SSL + ProxyProtocol 代理协议时编解码异常问题',
       actions: [
         {
           text: '立即查看',
