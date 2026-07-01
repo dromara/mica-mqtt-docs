@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.6.6 发布',
-      content: 'mica-mqtt 2.6.6 发布，修复 SSL + ProxyProtocol 代理协议时编解码异常问题',
+      title: 'mica-mqtt 2.6.7 发布',
+      content: 'mica-mqtt 2.6.7 发布，修复互踢时的会话清理逻辑和客户端异常重连',
       actions: [
         {
           text: '立即查看',
