@@ -78,7 +78,7 @@ MqttClient client = MqttClient.create()
     client.stop();
 ```
 
-![Android启动效果](mica-mqtt-client-android.png)
+![Android启动效果](./mica-mqtt-client-android.png)
 
 #### 4. 全局订阅（2.2.9开始支持）
 

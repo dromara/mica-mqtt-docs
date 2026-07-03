@@ -145,7 +145,7 @@ mqttServer.stop();
 
 如何确定 mica-net 的版本？可以打开 idea maven 依赖查看，当前依赖的 `mica-net-core` 版本，请确保跟 `mica-net-core` 使用一样的版本，避免版本兼容问题。
 
-![img.png](img.png)
+![img.png](./img.png)
 
 另外 http api 需要项目带有 jackson2、jackson3（mica-mqtt 2.5.5 开始支持）、fastjson、fastjson2、gson、hutool-json、snack3（mica-mqtt 2.3.4开始支持） 这些json工具其一。
 

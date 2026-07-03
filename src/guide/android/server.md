@@ -139,7 +139,7 @@ mqttServer.stop();
 
 **注意：** 2.4.4 之前版本请不要开启 `debug`，Android 上没有 `RuntimeMXBean` 会报错（2.4.4 已做兼容处理）。
 
-![Android启动效果](mica-mqtt-server-android.png)
+![Android启动效果](./mica-mqtt-server-android.png)
 
 #### 3. 启用混淆，需添加如下配置
 
@@ -163,7 +163,7 @@ implementation 'net.dreamlu:mica-net-http:$micaNetVersion'
 
 如何确定 mica-net 的版本？可以打开 idea maven 依赖查看，当前依赖的 `mica-net-core` 版本，请确保跟 `mica-net-core` 使用一样的版本，避免版本兼容问题。
 
-![img.png](img.png)
+![img.png](./img.png)
 
 另外 http api 需要项目带有 jackson、fastjson、fastjson2、gson、hutool-json、snack3（mica-mqtt 2.3.4开始支持） 这些json工具其一。
 
