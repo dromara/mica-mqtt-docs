@@ -28,7 +28,7 @@ order: 2
 
 ## 二、mqtt 服务
 
-### 2.1 配置项（2.5.x或以上）
+### 2.1 配置项
 
 ```yaml
 # mqtt 服务端配置
@@ -39,12 +39,27 @@ mqtt:
     heartbeat-timeout: 120000   # 心跳超时，单位毫秒，默认: 1000 * 120
     read-buffer-size: 8KB       # 接收数据的 buffer size，默认：8k
     max-bytes-in-message: 10MB  # 消息解析最大 bytes 长度，默认：10M
+    properties:                 # MQTT 5.0 服务端能力属性（CONNACK Properties）
+      receive-maximum: 65535    # 服务端允许客户端同时处理的 QoS1/QoS2 未确认报文上限，默认：65535（2.6.8 开始支持）
+      maximum-qos: 2            # 服务端支持的最大 QoS，默认：2（2.6.8 开始支持）
+      retain-available: true    # 服务端是否支持保留消息，默认：true（2.6.8 开始支持）
+      maximum-packet-size: 268435456 # 服务端可处理的最大报文大小（字节），默认：268435456（2.6.8 开始支持）
+      topic-alias-maximum: 0    # 服务端支持的最大主题别名数，0 表示不启用，默认：0（2.6.8 开始支持）
+      wildcard-subscription-available: true # 服务端是否支持通配符订阅，默认：true（2.6.8 开始支持）
+      shared-subscription-available: true   # 服务端是否支持共享订阅，默认：true（2.6.8 开始支持）
+      subscription-identifier-available: false # 服务端是否支持订阅标识符，默认：false（2.6.8 开始支持）
+      server-keep-alive: 0      # 服务端下发给 MQTT 5.0 客户端的 Keep Alive，0 表示不接管，默认：0（2.6.8 开始支持）
     auth:
       enable: false             # 是否开启 mqtt 认证
       username: mica            # mqtt 认证用户名
       password: mica            # mqtt 认证密码
     debug: true                 # 如果开启 prometheus 指标收集建议关闭
     stat-enable: true           # 开启指标收集，debug 和 prometheus 开启时需要打开，默认开启，关闭节省内存
+    shutdown-timeout-sec: 6000 # mqtt 工作线程池关闭等待超时时间，单位：秒，默认：6000（约 100 分钟，沿用 mica-net 默认值，2.6.8 开始支持）。
+                                # 该值仅控制 awaitTermination 的阻塞时长，超时不会强制中断线程；
+                                # 服务端 stop 时会按连接逐个触发 IMqttConnectStatusListener.onDisconnect，
+                                # 这些任务由 groupExecutor（默认 8~16 线程）串行处理，超时后这些任务仍会继续执行直到自然结束。
+                                # 请同步将部署环境终止宽限期（如 k8s terminationGracePeriodSeconds）调到不小于此值，否则进程会被 SIGKILL 强杀。
     mqtt-listener:              # mqtt 监听器
       enable: true              # 是否开启，默认：false
 #      ip: "0.0.0.0"            # 服务端 ip 默认为空，0.0.0.0，建议不要设置
@@ -57,7 +72,7 @@ mqtt:
         keystore-pass:          # 必选参数：ssl keystore 密码
         truststore-path:        # 可选参数：ssl 双向认证 truststore 目录，支持 classpath:/ 路径。
         truststore-pass:        # 可选参数：ssl 双向认证 truststore 密码
-        client-auth: none       # 是否需要客户端认证（双向认证），默认：NONE（不需要）
+        client-auth: NONE       # 是否需要客户端认证（双向认证），默认：NONE（不需要）
     ws-listener:                # websocket mqtt 监听器
       enable: true              # 是否开启，默认：false
       port: 8083                # websocket 端口，默认：8083
@@ -69,7 +84,7 @@ mqtt:
         keystore-pass:          # 必选参数：ssl keystore 密码
         truststore-path:        # 可选参数：ssl 双向认证 truststore 目录，支持 classpath:/ 路径。
         truststore-pass:        # 可选参数：ssl 双向认证 truststore 密码
-        client-auth: none       # 是否需要客户端认证（双向认证），默认：NONE（不需要）
+        client-auth: NONE       # 是否需要客户端认证（双向认证），默认：NONE（不需要）
     http-listener:
       enable: true
       port: 18083
@@ -77,44 +92,8 @@ mqtt:
         enable: true
         username: mica
         password: mica
-      mcp-server:               # 大模型 mcp
+      mcp:                      # 大模型 mcp
         enable: true
-```
-
-### 2.1 配置项（2.4.x或以下）
-
-```yaml
-mqtt:
-  server:
-    enabled: true               # 是否开启服务端，默认：true
-#    ip: 0.0.0.0                # 服务端 ip 默认为空，0.0.0.0，建议不要设置
-    port: 1883                  # 端口，默认：1883
-    name: Mica-Mqtt-Server      # 名称，默认：Mica-Mqtt-Server
-    buffer-allocator: HEAP      # 堆内存和堆外内存，默认：堆内存
-    heartbeat-timeout: 120000   # 心跳超时，单位毫秒，默认: 1000 * 120
-    read-buffer-size: 8KB       # 接收数据的 buffer size，默认：8k
-    max-bytes-in-message: 10MB  # 消息解析最大 bytes 长度，默认：10M
-    auth:
-      enable: false             # 是否开启 mqtt 认证
-      username: mica            # mqtt 认证用户名
-      password: mica            # mqtt 认证密码
-    debug: true                 # 如果开启 prometheus 指标收集建议关闭
-    stat-enable: true           # 开启指标收集，debug 和 prometheus 开启时需要打开，默认开启，关闭节省内存
-    proxy-protocol-enable: false   # 代理协议支持，nginx 可开启 tcp proxy_protocol on; 时转发源 ip 信息。2.4.1 版本开始支持
-    web-port: 8083              # http、websocket 端口，默认：8083
-    websocket-enable: true      # 是否开启 websocket，默认： true
-    http-enable: false          # 是否开启 http api，默认： false
-    http-basic-auth:
-      enable: false             # 是否开启 http basic auth，默认： false
-      username: mica            # http basic auth 用户名
-      password: mica            # http basic auth 密码
-    ssl:                        # mqtt tcp ssl 认证
-      enabled: false            # 是否开启 ssl 认证，2.1.0 开始支持双向认证
-      keystore-path:            # 必须参数：ssl keystore 目录，支持 classpath:/ 路径。
-      keystore-pass:            # 必选参数：ssl keystore 密码
-      truststore-path:          # 可选参数：ssl 双向认证 truststore 目录，支持 classpath:/ 路径。
-      truststore-pass:          # 可选参数：ssl 双向认证 truststore 密码
-      client-auth: none         # 是否需要客户端认证（双向认证），默认：NONE（不需要）
 ```
 
 注意：**ssl** 存在三种情况
@@ -262,3 +241,34 @@ public class MqttConnectOnlineListener implements EventListener<MqttClientOnline
 	}
 }
 ```
+
+### 2.7 Prometheus + Grafana 监控对接
+
+#### 添加依赖
+```xml
+<dependency>
+    <groupId>org.noear</groupId>
+    <artifactId>solon-cloud-metrics</artifactId>
+</dependency>
+<dependency>
+    <groupId>io.micrometer</groupId>
+    <artifactId>micrometer-registry-prometheus</artifactId>
+</dependency>
+```
+
+#### 指标
+| 支持的指标                          | 说明             |
+|--------------------------------| ---------------- |
+| mqtt_connections_accepted      | 共接受过连接数   |
+| mqtt_connections_closed        | 关闭过的连接数   |
+| mqtt_connections_size          | 当前连接数       |
+| mqtt_messages_handled_packets  | 已处理消息数     |
+| mqtt_messages_handled_bytes    | 已处理消息字节数  |
+| mqtt_messages_received_packets | 已接收消息数      |
+| mqtt_messages_received_bytes   | 已处理消息字节数 |
+| mqtt_messages_send_packets     | 已发送消息数      |
+| mqtt_messages_send_bytes       | 已发送消息字节数  |
+
+#### 配置说明
+
+solon 官方配置文档：https://solon.noear.org/article/588

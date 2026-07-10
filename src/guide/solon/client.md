@@ -37,7 +37,7 @@ mqtt:
     port: 1883                  # 端口：默认：1883
     name: Mica-Mqtt-Client      # 名称，默认：Mica-Mqtt-Client
     clientId: 000001            # 客户端Id（非常重要，一般为设备 sn，不可重复）
-    username: mica             # 认证的用户名，注意：2.5.x 之前是 user-name
+    username: mica              # 认证的用户名，注意：2.5.x 开始将 user-name 改成了 username
     password: 123456            # 认证的密码
     timeout: 5                  # 超时时间，单位：秒，默认：5秒
     reconnect: true             # 是否重连，默认：true
@@ -45,7 +45,6 @@ mqtt:
     version: mqtt_3_1_1         # mqtt 协议版本，可选 MQTT_3_1、mqtt_3_1_1、mqtt_5，默认：mqtt_3_1_1
     read-buffer-size: 8KB       # 接收数据的 buffer size，默认：8k
     max-bytes-in-message: 10MB  # 消息解析最大 bytes 长度，默认：10M
-    buffer-allocator: heap      # 堆内存和堆外内存，默认：堆内存
     keep-alive-secs: 60         # keep-alive 时间，单位：秒
     heartbeat-mode: LAST_REQ    # 心跳模式，支持最后发送或接收心跳时间来计算心跳，默认：最后发送心跳的时间。（2.4.3 开始支持）
     heartbeat-timeout-strategy: PING # 心跳超时策略，支持发送 PING 和 CLOSE 断开连接，默认：最大努力发送 PING。（2.4.3 开始支持）
@@ -55,6 +54,10 @@ mqtt:
     tio-executor-size: 8        # tio 编解码等线程数，默认：3，如果消息量比较大，处理较慢，例如做 emqx 的转发消息处理，可以调大此参数（2.5.12 开始支持）
     mqtt-executor-size: 8       # mqtt 业务线程数，默认：2或CPU核心数，如果消息量比较大，处理较慢，例如做 emqx 的转发消息处理，可以调大此参数（取较大值）（2.5.12 开始支持）
     biz-thread-pool-size: 2     # 同 mqtt-executor-size（2.4.2 开始支持，2.5.12 已经弃用）
+    pending-publish-queue-enabled: false # 是否开启 MQTT 连接前待发送消息队列，默认：false（2.6.4 开始支持，老版本默认丢弃数据，升级时保持兼容）
+    pending-publish-queue-size: 10 # MQTT 连接成功前的发布消息队列大小，默认：10（2.6.3 开始支持，2.6.4 默认会启用，注意 2.6.4 受 pending-publish-queue-enabled 开关影响）
+    shutdown-timeout-sec: 6000     # mqtt 工作线程池关闭等待超时时间，单位：秒，默认：6000（约 100 分钟，沿用 mica-net 默认值，2.6.8 开始支持）。
+                                  # 该值仅控制 awaitTermination 的阻塞时长，超时不会强制中断线程。
     ssl:
       enabled: false            # 是否开启 ssl 认证，2.1.0 开始支持双向认证
       keystore-path:            # 可选参数：ssl 双向认证 keystore 目录，支持 classpath:/ 路径。

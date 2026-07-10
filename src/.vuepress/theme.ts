@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.6.7 发布',
-      content: 'mica-mqtt 2.6.7 发布，修复互踢时的会话清理逻辑和客户端异常重连',
+      title: 'mica-mqtt 2.6.8 发布',
+      content: 'mica-mqtt 2.6.8 发布，修复服务器重启导致客户端重连异常的问题',
       actions: [
         {
           text: '立即查看',
