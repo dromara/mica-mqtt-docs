@@ -308,7 +308,7 @@ $ curl -i --basic -u mica:mica -X POST "http://localhost:18083/api/v1/mqtt/unsub
 **Examples:**
 
 ```bash
-$ curl -i --basic -u mica:mica -X POST "http://localhost:18083/api/v1/clients/info?clientId=mqttx_5fe4cfcf"
+$ curl -i --basic -u mica:mica "http://localhost:18083/api/v1/clients/info?clientId=mqttx_5fe4cfcf"
 
 {"code":1,"data":{"clientId":"mqttx_5fe4cfcf","connected":true,"connectedAt":1681792417835,"createdAt":1681792417835,"ipAddress":"127.0.0.1","port":11852,"protoName":"MQTT","protoVer":5}}
 ```
