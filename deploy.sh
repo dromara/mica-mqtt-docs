@@ -49,8 +49,8 @@ echo "==> 解压发布到 $REMOTE_DIR"
 ssh "$SSH_HOST" "
   set -e
   cd '$REMOTE_DIR'
-  # 清空旧产物（保留目录本身），然后解压新的 zip
-  find . -mindepth 1 -delete
+  # 清空旧产物（保留 dist.zip 自身），然后解压，最后清理 zip
+  find . -mindepth 1 ! -name 'dist.zip' -delete
   unzip -oq dist.zip
   rm -f dist.zip
 "
