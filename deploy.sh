@@ -14,7 +14,8 @@ cd "$(dirname "$0")"
 
 SSH_HOST="${1:-tx}"
 REMOTE_DIR="/data/nginx/mqtt_docs"
-DIST_DIR="src/.vuepress/dist"
+VUEPRESS_DIR="src/.vuepress"
+DIST_DIR="$VUEPRESS_DIR/dist"
 
 node -v && pnpm -v
 pnpm install --frozen-lockfile
@@ -22,11 +23,11 @@ pnpm build
 
 [ -d "$DIST_DIR" ] || { echo "✗ $DIST_DIR 不存在，构建失败" >&2; exit 1; }
 
-cd "$DIST_DIR"
-zip -qr ../dist.zip .
+cd "$VUEPRESS_DIR"
+tar -zcvf dist.zip dist
 cd -
 
-scp dist.zip "$SSH_HOST:$REMOTE_DIR/dist.zip"
-ssh "$SSH_HOST" "cd $REMOTE_DIR && rm -rf dist && unzip -oq dist.zip && rm -f dist.zip"
+scp "$VUEPRESS_DIR/dist.tar" "$SSH_HOST:$REMOTE_DIR/"
+ssh "$SSH_HOST" "cd $REMOTE_DIR && rm -rf dist && tar -zxvf dist.tar && rm -f dist.tar"
 
 echo "✓ 发布完成 -> $SSH_HOST:$REMOTE_DIR/dist"
