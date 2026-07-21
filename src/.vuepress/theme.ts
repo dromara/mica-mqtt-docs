@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.6.8 发布',
-      content: 'mica-mqtt 2.6.8 发布，修复服务器重启导致客户端重连异常的问题',
+      title: 'mica-mqtt 2.6.8.1 发布',
+      content: 'mica-mqtt 2.6.8.1 发布，mqtt-server 修复 MqttConnectHandler 中 Maximum QoS 属性处理逻辑',
       actions: [
         {
           text: '立即查看',
