@@ -24,7 +24,7 @@ pnpm build
 [ -d "$DIST_DIR" ] || { echo "✗ $DIST_DIR 不存在，构建失败" >&2; exit 1; }
 
 cd "$VUEPRESS_DIR"
-tar -zcvf dist.zip dist
+tar -zcvf dist.tar dist
 cd -
 
 scp "$VUEPRESS_DIR/dist.tar" "$SSH_HOST:$REMOTE_DIR/"
