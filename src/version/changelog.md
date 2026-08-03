@@ -3,6 +3,12 @@ title: mica-mqtt 发行版本
 icon: tag
 ---
 
+### v2.6.8.3 - 2026-07-23
+- 🐛 升级到 mica-net 2.0.12 优化异步 Accept 注册逻辑，提前注册下一次监听以避免连接初始化阻塞后续接入和优化异常后的接入，gitee #IK377S 感谢 `@scafel` 反馈。
+
+### v2.6.8.2 - 2026-07-22
+- 🐛 mqtt-codec 修复 UNSUBACK 消息的 MQTT 版本兼容编码 github #201 感谢 `@waterlyx` 反馈。
+
 ### v2.6.8.1 - 2026-07-21
 - 🐛 mqtt-server修复 `MqttConnectHandler` 中 `Maximum QoS` 属性处理逻辑，确保符合 MQTT 5.0 规范。github #200 感谢 `@waterlyx` 反馈。
 
