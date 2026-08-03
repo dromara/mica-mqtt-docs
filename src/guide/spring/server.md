@@ -80,9 +80,9 @@ mqtt:
       enable: false                     # 是否启用，默认：false
       port: 8883                        # 端口，默认：8883
       ssl:
-        keystore-path:                   # 必填：ssl keystore 证书路径，支持 classpath:/ 路径
+        keystore-path:                   # 必填：ssl keystore 证书路径，支持 classpath: 路径
         keystore-pass:                   # 必填：ssl keystore 密码
-        truststore-path:                 # 可选：ssl 双向认证 truststore 证书路径，支持 classpath:/ 路径
+        truststore-path:                 # 可选：ssl 双向认证 truststore 证书路径，支持 classpath: 路径
         truststore-pass:                 # 可选：ssl 双向认证 truststore 密码
         client-auth: NONE                # 客户端认证类型，默认：NONE（不需要），可选 OPTIONAL / REQUIRE
     # ------ websocket mqtt 监听器 ------
@@ -94,9 +94,9 @@ mqtt:
       enable: false                     # 是否启用，默认：false
       port: 8084                        # 端口，默认：8084
       ssl:
-        keystore-path:                   # 必填：ssl keystore 证书路径，支持 classpath:/ 路径
+        keystore-path:                   # 必填：ssl keystore 证书路径，支持 classpath: 路径
         keystore-pass:                   # 必填：ssl keystore 密码
-        truststore-path:                 # 可选：ssl 双向认证 truststore 证书路径，支持 classpath:/ 路径
+        truststore-path:                 # 可选：ssl 双向认证 truststore 证书路径，支持 classpath: 路径
         truststore-pass:                 # 可选：ssl 双向认证 truststore 密码
         client-auth: NONE                # 客户端认证类型，默认：NONE（不需要），可选 OPTIONAL / REQUIRE
     # ------ http api 监听器 ------
@@ -115,7 +115,7 @@ mqtt:
         sse-message-endpoint: /mcp/message  # sse message 端点
       ssl:                              # http ssl 配置
         enable: false                   # 是否启用，默认：false
-        keystore-path:                  # 必填：ssl keystore 证书路径，支持 classpath:/ 路径
+        keystore-path:                  # 必填：ssl keystore 证书路径，支持 classpath: 路径
         keystore-pass:                  # 必填：ssl keystore 密码
         truststore-path:                # 可选：ssl 双向认证 truststore 证书路径
         truststore-pass:                # 可选：ssl 双向认证 truststore 密码

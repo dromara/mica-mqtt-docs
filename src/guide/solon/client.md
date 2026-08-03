@@ -60,9 +60,9 @@ mqtt:
                                   # 该值仅控制 awaitTermination 的阻塞时长，超时不会强制中断线程。
     ssl:
       enabled: false            # 是否开启 ssl 认证，2.1.0 开始支持双向认证
-      keystore-path:            # 可选参数：ssl 双向认证 keystore 目录，支持 classpath:/ 路径。
+      keystore-path:            # 可选参数：ssl 双向认证 keystore 目录，支持 classpath: 路径。
       keystore-pass:            # 可选参数：ssl 双向认证 keystore 密码
-      truststore-path:          # 可选参数：ssl 双向认证 truststore 目录，支持 classpath:/ 路径。
+      truststore-path:          # 可选参数：ssl 双向认证 truststore 目录，支持 classpath: 路径。
       truststore-pass:          # 可选参数：ssl 双向认证 truststore 密码
 ```
 

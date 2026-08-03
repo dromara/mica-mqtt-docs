@@ -48,9 +48,9 @@ mica:
   client:
     ssl:
       enabled: false            # 是否开启 ssl 认证，2.1.0 开始支持双向认证
-      keystore-path:            # 可选参数：ssl 双向认证 keystore 目录，支持 classpath:/ 路径。
+      keystore-path:            # 可选参数：ssl 双向认证 keystore 目录，支持 classpath: 路径。
       keystore-pass:            # 可选参数：ssl 双向认证 keystore 密码
-      truststore-path:          # 可选参数：ssl 双向认证 truststore 目录，支持 classpath:/ 路径。
+      truststore-path:          # 可选参数：ssl 双向认证 truststore 目录，支持 classpath: 路径。
       truststore-pass:          # 可选参数：ssl 双向认证 truststore 密码
 ```
 
@@ -86,9 +86,9 @@ mica:
   server:
     ssl:                        # mqtt tcp ssl 认证
       enabled: false            # 是否开启 ssl 认证，2.1.0 开始支持双向认证
-      keystore-path:            # 必须参数：ssl keystore 目录，支持 classpath:/ 路径。
+      keystore-path:            # 必须参数：ssl keystore 目录，支持 classpath: 路径。
       keystore-pass:            # 必选参数：ssl keystore 密码
-      truststore-path:          # 可选参数：ssl 双向认证 truststore 目录，支持 classpath:/ 路径。
+      truststore-path:          # 可选参数：ssl 双向认证 truststore 目录，支持 classpath: 路径。
       truststore-pass:          # 可选参数：ssl 双向认证 truststore 密码
       client-auth: none         # 是否需要客户端认证（双向认证），默认：NONE（不需要）
 ```
