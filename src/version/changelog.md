@@ -3,6 +3,12 @@ title: mica-mqtt 发行版本
 icon: tag
 ---
 
+### v2.6.9 - 2026-08-05
+- ✨ mica-mqtt SSL 支持 TLS 协议版本列表（如 TLSv1.2、TLSv1.3）等配置，简化使用。
+- ✨ 添加 Spring Boot、Solon SSL 对 TLS 协议版本等配置项的配置。
+- ♻️ mica-mqtt-client 移除内置的 `MqttSSLEngineCustomizer`，改为配置参数驱动。
+- ⬆️ 升级到 mica-net 2.0.13
+
 ### v2.6.8.3 - 2026-07-23
 - 🐛 升级到 mica-net 2.0.12 优化异步 Accept 注册逻辑，提前注册下一次监听以避免连接初始化阻塞后续接入和优化异常后的接入，gitee #IK377S 感谢 `@scafel` 反馈。
 
