@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.6.9 发布',
-      content: 'mica-mqtt 2.6.9 发布，添加 Spring Boot、Solon SSL 对 TLS 协议版本等配置项的配置',
+      title: 'mica-mqtt 2.6.9.1 发布',
+      content: 'mica-mqtt 2.6.9.1 发布，优化 HTTP API 认证支持多种方案，并升级 mica-net 修复 TOCTOU 竞态',
       actions: [
         {
           text: '立即查看',

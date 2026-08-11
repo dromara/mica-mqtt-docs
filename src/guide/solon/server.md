@@ -106,7 +106,15 @@ mqtt:
     http-listener:
       enable: true
       port: 18083
-      basic-auth:               # 基础认证
+      auth:                     # http api 认证（2.6.10 开始支持）
+        enable: true
+        scheme: Basic           # 认证 scheme: Basic / Bearer / 自定义，默认：Basic
+        header-name: authorization  # token 所在的请求头，默认：authorization
+        username: mica
+        password: mica
+      # 兼容旧字段,等价于上面的 auth.username / auth.password
+      # 2.6.10 标记为 @Deprecated,将在后续版本移除
+      basic-auth:
         enable: true
         username: mica
         password: mica
@@ -154,6 +162,8 @@ mqtt:
 | AbstractMqttMessageDispatcher | 集群是，单机否    | 消息转发，（遗嘱、保留消息转发）                              |
 | IpStatListener                | 否          | t-io ip 状态监听                                  |
 | IMqttMessageInterceptor       | 否          | 消息拦截器，1.3.9 新增                                |
+| HttpFilter                    | 否（2.6.10+）  | 自定义 HTTP API 认证过滤器,优先级最高,完全接管              |
+| ITokenValidator               | 否（2.6.10+）  | 自定义 Token 校验器,scheme/header 走配置文件                |
 
 
 ### 2.3 `MqttServerFunction` 注解监听客户端上传的消息使用示例（v2.5.3开始支持）
@@ -276,7 +286,88 @@ public class MqttConnectOnlineListener implements EventListener<MqttClientOnline
 }
 ```
 
-### 2.7 Prometheus + Grafana 监控对接
+### 2.8 HTTP API 自定义 Token 校验（2.6.10+）
+
+HTTP API 认证支持三种方式,优先级从高到低:
+
+1. **注入 `HttpFilter` Bean** — 完全自定义(双因素、IP 白名单 + token、复杂策略)
+2. **注入 `ITokenValidator` Bean** — 自定义 token 校验逻辑,scheme/header 走配置文件
+3. **配置文件 username/password** — 内置 `BasicAuthValidator`,开箱即用
+
+#### 方式一:注入 ITokenValidator
+
+适用场景:对接 OAuth2 introspection、JWT 解析、自建 token 服务等。
+
+```yaml
+mqtt.server.http-listener:
+  auth:
+    enable: true
+    scheme: Bearer           # 解析 Authorization: Bearer xxx
+    header-name: authorization
+```
+
+```java
+@Configuration
+public class TokenAuthConfig {
+
+    @Bean
+    public ITokenValidator myTokenValidator() {
+        return (request, token) -> {
+            // 示例:调用 OAuth2 introspection 端点
+            return oauthClient.introspect(token).isActive();
+        };
+    }
+}
+```
+
+请求示例:
+
+```bash
+curl -H "Authorization: Bearer xxx" http://localhost:18083/mqtt/publish?topic=/test&message=hello
+```
+
+#### 方式二:注入 HttpFilter
+
+适用场景:需要完全控制 HTTP 协议(如自定义响应、双因素认证、IP 白名单等)。
+
+```java
+@Bean
+public HttpFilter customAuthFilter() {
+    return new TokenAuthFilter("X-API-Key", "", (request, token) -> {
+        // X-API-Key: xxx 形式
+        return myKeyStore.contains(token);
+    });
+}
+```
+
+请求示例:
+
+```bash
+curl -H "X-API-Key: xxx" http://localhost:18083/mqtt/publish?topic=/test&message=hello
+```
+
+#### 方式三:配置文件(默认 Basic)
+
+适用场景:内网、简单保护。
+
+```yaml
+mqtt.server.http-listener:
+  auth:
+    enable: true
+    scheme: Basic
+    username: mica
+    password: mica
+```
+
+请求示例:
+
+```bash
+curl -u mica:mica http://localhost:18083/mqtt/publish?topic=/test&message=hello
+```
+
+校验失败统一返回 401,并设置 `WWW-Authenticate: <scheme> realm="Mica mqtt realm"` 响应头。
+
+### 2.9 Prometheus + Grafana 监控对接
 
 #### 添加依赖
 ```xml
