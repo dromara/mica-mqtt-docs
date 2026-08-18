@@ -29,8 +29,8 @@ highlights:
       - title: 支持 MQTT client、server 共享订阅。
       - title: 支持 MQTT 遗嘱消息。
       - title: 支持 MQTT 保留消息。
-      - title: 支持 MQTT client、server 支持 java8 或以上版本，支持原生 Android。
-      - title: 支持 Spring boot 2x、Spring boot 3x、Solon 和 JFinal 项目快速接入。
+      - title: 支持 MQTT client、server 支持 java8 或以上版本，支持 Android 原生。
+      - title: 支持 Spring boot 2x、Spring boot 3x、Spring boot 4x、Solon 和 JFinal 项目快速接入。
       - title: 支持 GraalVM 编译成本机可执行程序。
 
 ---
