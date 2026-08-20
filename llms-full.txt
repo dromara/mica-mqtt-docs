@@ -1504,7 +1504,7 @@ mqtt:
         enable: true
         endpoint: /mcp/message          # stream http endpoint
         sse-endpoint: /mcp/sse          # sse 端点
-        sse-message-endpoint: /mcp/message  # sse message 端点
+        sse-message-endpoint: /mcp/sse/message  # sse message 端点
 ```
 
 ![mica-mqtt-mcp-config.png](/assets/image/mica-mqtt-mcp-config.png)
