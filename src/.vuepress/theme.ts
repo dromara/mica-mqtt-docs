@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.6.9.1 发布',
-      content: 'mica-mqtt 2.6.9.1 发布，优化 HTTP API 认证支持多种方案，并升级 mica-net 修复 TOCTOU 竞态',
+      title: 'mica-mqtt 2.6.10 发布',
+      content: 'mica-mqtt 2.6.10 发布，优化 spring boot client 接口发布的 topic 占位符获取',
       actions: [
         {
           text: '立即查看',
