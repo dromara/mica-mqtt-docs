@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.6.10 发布',
-      content: 'mica-mqtt 2.6.10 发布，优化 spring boot client 接口发布的 topic 占位符获取',
+      title: 'mica-mqtt 2.6.11 发布',
+      content: 'mica-mqtt 2.6.11 发布，修复 `ClientReConnTask` 重连时错误判断，调整 `DefaultTimerTaskService` 默认时间轮粒度',
       actions: [
         {
           text: '立即查看',

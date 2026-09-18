@@ -3,6 +3,9 @@ title: mica-mqtt 发行版本
 icon: tag
 ---
 
+### v2.6.11 - 2026-09-19
+- chore(build): 调整 mica-net 版本为 2.0.16，修复 `ClientReConnTask` 重连时错误判断，调整 `DefaultTimerTaskService` 默认时间轮粒度。
+
 ### v2.6.10 - 2026-09-11
 - feat(client): MqttClientPublish 主题占位符支持方法参数，新增 @TopicParam 参数注解，配合 resolveTopic(Function) 按需取值。 (gitee #IKED1S) 感谢 @humlzy 反馈。
 - fix(mica-mqtt-client): getContext() 校验缓存 context 活体，失效时重新获取。
