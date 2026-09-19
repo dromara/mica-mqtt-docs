@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.6.11 发布',
-      content: 'mica-mqtt 2.6.11 发布，修复 `ClientReConnTask` 重连时错误判断，调整 `DefaultTimerTaskService` 默认时间轮粒度',
+      title: 'mica-mqtt 2.6.12 发布',
+      content: 'mica-mqtt 2.6.12 发布，修复重传时固定头 DUP 编码',
       actions: [
         {
           text: '立即查看',
