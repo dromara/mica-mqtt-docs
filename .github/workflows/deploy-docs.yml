@@ -13,14 +13,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 拉取代码
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - name: 设置 pnpm
-        uses: pnpm/setup@v1
+        uses: pnpm/setup@v3
         with:
           version: 11
-          runtime: node@22
+          runtime: node@24
           cache: true
       - name: 安装依赖
         run: pnpm install --frozen-lockfile
