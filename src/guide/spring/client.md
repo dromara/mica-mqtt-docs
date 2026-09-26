@@ -229,6 +229,24 @@ public class MainService {
 }
 ```
 
+### 2.7 接口代理
+
+```java
+
+@EnableMqttClients
+public class MqttClientApplication {
+    // ...
+}
+
+@MqttClient(clientBean = "mqttClientTemplate")
+public interface HelloInterface {
+
+    @MqttClientPublish(value = "/test/client")
+    void sendMessage(@MqttPayload Object message);
+
+}
+```
+
 ## 3. 多个 mqtt client 客户端
 ### 3.1 自定义 MqttClientTemplate bean 2.2.11 开始已简化，老版本建议先升级。
 ```java
