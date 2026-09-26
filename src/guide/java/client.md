@@ -63,12 +63,21 @@ MqttClient client = MqttClient.create()
     // 发送消息
     client.publish("/test/client", "mica最牛皮".getBytes(StandardCharsets.UTF_8));
 
+    // 接口代理
+    HelloInterface helloInterface = client.getInterface(HelloInterface.class);
+    helloInterface.sendMessage("mica最牛皮");
+
     // 断开连接
     client.disconnect();
     // 重连
     client.reconnect();
     // 停止
     client.stop();
+
+public interface HelloInterface{
+    @MqttClientPublish(value = "/test/client")
+    void sendMessage(@MqttPayload Object message);
+}
 ```
 
 #### 3. 全局订阅（2.2.9开始支持）
