@@ -71,8 +71,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.6.12 发布',
-      content: 'mica-mqtt 2.6.12 发布，修复重传时固定头 DUP 编码',
+      title: 'mica-mqtt 2.6.13 发布',
+      content: 'mica-mqtt 2.6.13 发布，mica-mqtt-client 接口支持 Default Method\n',
       actions: [
         {
           text: '立即查看',
