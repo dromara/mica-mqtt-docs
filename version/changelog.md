@@ -1,6 +1,10 @@
 ---
 url: /version/changelog.md
 ---
+### v2.6.13 - 2026-09-27
+
+* ✨ mica-mqtt-client 接口支持 Default Method (github #217) 感谢 @galaxy-sea 贡献。
+
 ### v2.6.12 - 2026-09-19
 
 * 🐛 fix(codec、common): 修复重传时 `SUBSCRIBE`、`UNSUBSCRIBE`、`PUBREL`、`PUBREC` 的固定头 DUP 位被错误置 1，发出 `0x8A`、`0xAA` 等非法报文被严格校验的 broker 断开连接。gitee #IKH0V8 感谢 `@mxyyyy` 反馈。
