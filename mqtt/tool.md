@@ -15,4 +15,4 @@ url: /mqtt/tool.md
 * android: https://github.com/eclipse/paho.mqtt.android
 * ios: https://github.com/novastone-media/MQTT-Client-Framework
 * js(uniapp、小程序): https://github.com/mqttjs/MQTT.js
-* dart mqtt client: https://pub.dev/packages/mqtt\_client
+* dart mqtt client: https://pub.dev/packages/mqtt_client

@@ -64,7 +64,7 @@ url: /version/changelog.md
 * 🐛 mqtt 修正 `WSS监听器` 启用逻辑判断 github #193 感谢 `@laoLiangLoveProgram` 反馈。
 * 🔧 修正配置中 `client-auth` 枚举大小写与键名（统一为 NONE），`mcp-server` 键改名为 `mcp`。
 * 📝 重构 `mqtt5-features` 文档至 v2.0，完善服务端架构与特性说明。
-* 🧪 添加 MQTT 5.0 单字节布尔属性往返测试用例，覆盖 REQUEST\_PROBLEM\_INFORMATION、RETAIN\_AVAILABLE 等属性。
+* 🧪 添加 MQTT 5.0 单字节布尔属性往返测试用例，覆盖 REQUEST_PROBLEM_INFORMATION、RETAIN_AVAILABLE 等属性。
 * 🧪 添加客户端重连混沌测试用例（FakeBroker 模拟），覆盖服务端重启与异常握边界。
 * 🧪 完善 `InMemoryMqttSessionManager` 单元测试覆盖（含订阅、packetId 分配、QoS/共享订阅、待发送消息等）。
 * ⬆️ 升级到 mica-net 2.0.11 正式版，重连问题 #IJVOZ7 再次尝试修复，感谢 `@mydeoschina` 反馈。
@@ -152,19 +152,19 @@ url: /version/changelog.md
 
 * :sparkles: mica-mqtt-client solon 和 spring 插件 MQTT 客户端订阅中的 beanName 支持占位符解析，感谢 `@tan90` 反馈（gitee #ID7PF6）
 * :sparkles: mica-mqtt-server ClientInfo 添加 SSL 和 WebSocket 标识。
-* :arrow\_up: 升级到 mica-net 1.2.4，优化 sse，修复 jackson3 方法错误。
+* :arrow_up: 升级到 mica-net 1.2.4，优化 sse，修复 jackson3 方法错误。
 
 ### v2.5.7 - 2025-11-07
 
 * :sparkles: mica-mqtt-server 新增 `/api/v1/stats/sse` 接口，支持通过 SSE 实时获取服务器统计信息
 * :sparkles: example 升级到 solon 3.7.0 更改相关依赖命名规则
-* :arrow\_up: 升级 mica-net 到 1.2.2 支持 snack4 json 序列化，内存优化和消息发送性能优化
+* :arrow_up: 升级 mica-net 到 1.2.2 支持 snack4 json 序列化，内存优化和消息发送性能优化
 * :bug: mica-mqtt-server-solon-plugin 移除 MqttServerConfiguration bean MqttFunctionManager 的 static 修饰符
 
 ### v2.5.6 - 2025-10-27
 
 * :bug: 修复 MQTT 解码器中的缓冲区读取问题，修复解码异常重连后无法恢复的问题。（所有版本）
-* :arrow\_up: 升级 mica-net 到 1.2.1，修改慢包读取 (gitee #ID3IAU)，影响范围（2.5.5）
+* :arrow_up: 升级 mica-net 到 1.2.1，修改慢包读取 (gitee #ID3IAU)，影响范围（2.5.5）
 
 ### v2.5.5 - 2025-10-10
 
@@ -173,7 +173,7 @@ url: /version/changelog.md
 * :sparkles: mqtt-client 添加 disconnectBeforeStop 配置（默认 true），断开连接前是否发送 disconnect 消息，感谢 `@steven` 反馈（gitee #ICXY4A）
 * :sparkles: mica-mqtt-server 使用 ConcurrentHashMap 替代 IntObjectHashMap，优化内存会话管理
 * :sparkles: mica-mqtt-server-spring-boot-starter bean 加载顺序优化，避免出现提示
-* :arrow\_up: 升级 mica-net 到 1.2.0，调整慢包攻击规则和支持 jackson3，感谢 `@well` 反馈（gitee #ICXF5N）
+* :arrow_up: 升级 mica-net 到 1.2.0，调整慢包攻击规则和支持 jackson3，感谢 `@well` 反馈（gitee #ICXF5N）
 
 ### v2.5.4 - 2025-08-29
 
@@ -287,7 +287,7 @@ url: /version/changelog.md
 ### v2.4.1 - 2025-01-04
 
 * :sparkles: mqtt server 统一 topic 订阅、发布认证日志方便排查问题。
-* :sparkles: mqtt server 添加 PROXY protocol v1 支持，nginx 可开启 tcp proxy\_protocol on; 时转发源 ip 信息。
+* :sparkles: mqtt server 添加 PROXY protocol v1 支持，nginx 可开启 tcp proxy_protocol on; 时转发源 ip 信息。
 * :memo: 修复文档 maven 坐标错误。
 * :bug: 修复 spring boot 项目使用全局懒加载 topic无法订阅 gitee #IBFIV8 感谢 `@xixuanhao` 反馈
 
@@ -398,7 +398,7 @@ url: /version/changelog.md
 
 * :sparkles: jfinal-mica-mqtt-client 启动改为同步连接。
 * :bug: mica-mqtt-client 修复 `isConnected` 判断。`2.2.7` 中存在此问题。
-* :arrow\_up: 依赖升级
+* :arrow_up: 依赖升级
 
 ### v2.2.7 - 2024-01-03
 
@@ -431,7 +431,7 @@ url: /version/changelog.md
 
 * :sparkles: mqtt server http api publish 不按 clientId 进行路由（无实际意义），而是按 topic，规则改为同 emqx。
 * :sparkles: mqtt server http api publish 触发 onMessage 消息监听。
-* :arrow\_up: 依赖升级
+* :arrow_up: 依赖升级
 
 ### v2.2.2 - 2023-06-17
 
@@ -442,7 +442,7 @@ url: /version/changelog.md
 ### v2.2.1 - 2023-05-28
 
 * :zap: mica-mqtt-client 共享订阅更好的兼容 emqx 高版本，gitee #I786GU
-* :arrow\_up: 依赖升级
+* :arrow_up: 依赖升级
 
 ### v2.2.0 - 2023-05-14
 
@@ -466,7 +466,7 @@ url: /version/changelog.md
 * :sparkles: mica-mqtt-client 优化链接时的遗嘱消息构建，默认为 qos0。`@tan90` 反馈 gitee #I6BRBV
 * :bug: mqtt-server 修复 mqtt.js websocket 空包问题，感谢群友反馈。
 * :bug: mqtt-server 修复 websocket mqtt 包长度判断问题。
-* :arrow\_up: 依赖升级
+* :arrow_up: 依赖升级
 
 ### v2.1.0 - 2023-03-05
 
@@ -476,12 +476,12 @@ url: /version/changelog.md
 * :sparkles: ssl 支持双向认证 gitee #I61AHJ 感谢 @DoubleH 反馈
 * :bug: 修复遗嘱消息判断 gitee #I6BRBV 感谢 @tan90 反馈。
 * :bug: 修复错别字 gitee #I6F2PA 感谢 @hpz 反馈
-* :arrow\_up: 依赖升级
+* :arrow_up: 依赖升级
 
 ### v2.0.3 - 2022-09-18
 
 * :sparkles: 完善 ssl 方法，方便使用。
-* :arrow\_up: 依赖升级，避免依赖导致的 bug。
+* :arrow_up: 依赖升级，避免依赖导致的 bug。
 
 ### v2.0.2 - 2022-09-13
 
@@ -524,14 +524,14 @@ url: /version/changelog.md
 * :sparkles: mica-mqtt server 代码优化，useQueueDecode 默认为 true。
 * :sparkles: mica-mqtt client 监听回调代码优化。
 * :memo: 添加赞助，让你我走的更远！！！
-* :arrow\_up: 依赖升级。
+* :arrow_up: 依赖升级。
 
 ### v1.3.6 - 2022-06-25
 
 * :sparkles: mica-mqtt 统一调整最大的消息体和一次读取的字节数。
 * :sparkles: mica-mqtt client 简化 ssl 开启。
 * :sparkles: mica-mqtt server 添加默认的账号密码配置。
-* :arrow\_up: 依赖升级
+* :arrow_up: 依赖升级
 
 ### v1.3.4 - 2022-06-06
 
@@ -547,7 +547,7 @@ url: /version/changelog.md
 * :sparkles: mica-mqtt 添加 kafka TimingWheel 重构 ack。
 * :sparkles: mica-mqtt server 添加 `MqttClusterMessageListener` 方便集群消息处理。
 * :sparkles: mica-mqtt client 优化客户端取消订阅逻辑，gitee #I5779A 感谢 `@杨钊` 同学反馈。
-* :arrow\_up: 升级 fastjson 到 1.2.83。
+* :arrow_up: 升级 fastjson 到 1.2.83。
 
 ### v1.3.2 - 2022-05-09
 
@@ -567,7 +567,7 @@ url: /version/changelog.md
 * :sparkles: mica-mqtt client 添加同步连接 connectSync 方法。
 * :sparkles: mica-mqtt client 优化 bean 依赖，减少循环依赖可能性。
 * :bug: 重构 mqtt topic 匹配规则，提升性能减少内存占用，修复 gitee #I56BTC
-* :arrow\_up: spring boot、mica 版本升级
+* :arrow_up: spring boot、mica 版本升级
 
 ### v1.3.0 - 2022-04-17
 
@@ -581,7 +581,7 @@ url: /version/changelog.md
 * :sparkles: 使用 netty IntObjectHashMap 优化默认 session 存储。
 * :sparkles: 添加 github action，用于自动构建开发阶段的 SNAPSHOT 版本。
 * :sparkles: 示例项目拆分到 example 目录，mica-mqtt client、server starter 拆分到 starter 目录。
-* :arrow\_up: 依赖升级.
+* :arrow_up: 依赖升级.
 
 ### v1.2.10 - 2022-03-20
 
@@ -611,7 +611,7 @@ url: /version/changelog.md
 * :sparkles: mica-mqtt client 考虑一开始就没有连接上服务端的情况。
 * :sparkles: mica-mqtt client 添加 isConnected 方法
 * :sparkles: mica-mqtt client、server connectListener 改为异步
-* :sparkles: mica-mqtt server ChannelContext 添加用户名，使用 (String) context.get(MqttConst.USER\_NAME\_KEY) 获取。
+* :sparkles: mica-mqtt server ChannelContext 添加用户名，使用 (String) context.get(MqttConst.USER_NAME_KEY) 获取。
 * :sparkles: websocket ssl 配置
 * :sparkles: 尝试新版 graalvm
 * :bug: 修复多个 mica mqtt client 消息id生成器隔离。
@@ -651,7 +651,7 @@ url: /version/changelog.md
 * :sparkles: mica-mqtt client 添加客户端是否断开连接。
 * :sparkles: mica-mqtt client 客户端断开重新订阅时支持配置批次大小。
 * :bookmark: mica-mqtt client 订阅 `IMqttClientMessageListener` 添加 `onSubscribed` 默认方法。
-* :arrow\_up: mica-mqtt-example 升级 log4j2 到 2.17.1
+* :arrow_up: mica-mqtt-example 升级 log4j2 到 2.17.1
 
 ### v1.2.2 - 2021-12-26
 
@@ -660,7 +660,7 @@ url: /version/changelog.md
 * :sparkles: mica-mqtt client 重复订阅优化。感谢 `@一片小雨滴`
 * :sparkles: mica-mqtt client 抽象 IMqttClientSession 接口。
 * :bug: 修复重构 AbstractMqttMessageDispatcher 保持跟 mica-mqtt-broker 逻辑一致 gitee #I4MA6A 感谢 `@胡萝博`
-* :arrow\_up: mica-mqtt-example 升级 log4j2 到 2.17.0
+* :arrow_up: mica-mqtt-example 升级 log4j2 到 2.17.0
 
 ### v1.2.1 - 2021-12-11
 
@@ -690,7 +690,7 @@ url: /version/changelog.md
 * :memo: 完善 mica-mqtt-broker README.md，添加二开说明。
 * :memo: 统一 mica-mqtt server ip 文档。
 * :memo: 更新 README.md
-* :arrow\_up: 升级 tio 到 3.7.5.v20211028-RELEASE AioDecodeException 改为 TioDecodeException，
+* :arrow_up: 升级 tio 到 3.7.5.v20211028-RELEASE AioDecodeException 改为 TioDecodeException，
 
 ### v1.1.4 - 2021-10-16
 
@@ -703,7 +703,7 @@ url: /version/changelog.md
 * :sparkles: 从认证中拆分 `IMqttServerSubscribeValidator` 订阅校验接口，添加 ChannelContext、clientId 参数。
 * :sparkles: 认证 `IMqttServerAuthHandler` 调整包、添加 ChannelContext 参数。
 * :sparkles: 完善文档和示例，添加默认端口号说明。
-* :arrow\_up: 依赖升级
+* :arrow_up: 依赖升级
 
 ### v1.1.2 - 2021-09-12
 
@@ -755,7 +755,7 @@ url: /version/changelog.md
 * :sparkles: 优化 deploy.sh 脚本。
 * :bug: 优化解码异常处理。
 * :bug: 修复心跳超时处理。
-* :arrow\_up: 升级 spring boot 到 2.5.4
+* :arrow_up: 升级 spring boot 到 2.5.4
 
 ### v1.0.5 - 2021-08-15
 
@@ -774,7 +774,7 @@ url: /version/changelog.md
 * :sparkles: mica-mqtt 代码优化，部分 Tio.close 改为 Tio.remove。
 * :sparkles: mica-mqtt-spring-boot-example 添加 Dockerfile，支持 `spring-boot:build-image`。
 * :sparkles: 完善 mica-mqtt-spring-boot-starter，添加遗嘱消息配置。
-* :arrow\_up: 升级 t-io 到 3.7.4。
+* :arrow_up: 升级 t-io 到 3.7.4。
 
 ### v1.0.3-RC - 2021-08-12
 
@@ -785,7 +785,7 @@ url: /version/changelog.md
 * :sparkles: mqtt 3.1 协议会校验 clientId 长度，添加设置。
 * :sparkles: mqtt 日志优化，方便查询。
 * :sparkles: 代码优化，部分 Tio.close 改为 Tio.remove。
-* :arrow\_up: 升级 t-io 到 3.7.4。
+* :arrow_up: 升级 t-io 到 3.7.4。
 
 ### v1.0.2 - 2021-08-08
 
@@ -797,7 +797,7 @@ url: /version/changelog.md
 * :sparkles: mica-mqtt-spring-boot-starter 支持客户端接入和服务端优化。感谢 wsq（ @冷月宫主 ）pr。
 * :sparkles: mica-mqtt-spring-boot-starter 服务端支持指标收集。可对接 `Prometheus + Grafana` 监控。
 * :sparkles: mqtt server 接受连接时，先判断该 clientId 是否存在其它连接，有则解绑并关闭其他连接。
-* :arrow\_up: 升级 mica-auto 到 2.1.3 修复 ide 多模块增量编译问题。
+* :arrow_up: 升级 mica-auto 到 2.1.3 修复 ide 多模块增量编译问题。
 
 ### v1.0.2-RC - 2021-08-04
 

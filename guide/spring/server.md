@@ -410,12 +410,12 @@ curl -u mica:mica http://localhost:18083/mqtt/publish?topic=/test&message=hello
 
 | 支持得指标                     | 说明             |
 | ------------------------------ | ---------------- |
-| mqtt\_connections\_accepted      | 共接受过连接数   |
-| mqtt\_connections\_closed        | 关闭过的连接数   |
-| mqtt\_connections\_size          | 当前连接数       |
-| mqtt\_messages\_handled\_packets  | 已处理消息数     |
-| mqtt\_messages\_handled\_bytes    | 已处理消息字节数  |
-| mqtt\_messages\_received\_packets | 已接收消息数      |
-| mqtt\_messages\_received\_bytes   | 已处理消息字节数 |
-| mqtt\_messages\_send\_packets     | 已发送消息数      |
-| mqtt\_messages\_send\_bytes       | 已发送消息字节数  |
+| mqtt_connections_accepted      | 共接受过连接数   |
+| mqtt_connections_closed        | 关闭过的连接数   |
+| mqtt_connections_size          | 当前连接数       |
+| mqtt_messages_handled_packets  | 已处理消息数     |
+| mqtt_messages_handled_bytes    | 已处理消息字节数  |
+| mqtt_messages_received_packets | 已接收消息数      |
+| mqtt_messages_received_bytes   | 已处理消息字节数 |
+| mqtt_messages_send_packets     | 已发送消息数      |
+| mqtt_messages_send_bytes       | 已发送消息字节数  |

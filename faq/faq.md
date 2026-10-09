@@ -38,7 +38,7 @@ url: /faq/faq.md
 #### 6.1 搜索关键词 `nginx tcp 负载均衡` 即可：
 
 * https://zhuanlan.zhihu.com/p/139275668
-* http://nginx.org/en/docs/stream/ngx\_stream\_proxy\_module.html
+* http://nginx.org/en/docs/stream/ngx_stream_proxy_module.html
 
 #### 6.2 配置 /etc/nginx/nginx.conf，示例:
 
