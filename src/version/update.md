@@ -5,6 +5,10 @@ icon: arrow-up
 
 **mica-mqtt** 尽量减少对 api 的改动已保证老版本的平滑升级，但是有些大版本不得不改动。希望此文档对大家有所帮助。
 
+## 迁移到 mica-mqtt 2.6.2
+
+注意：mica-net 包从 `org.tio` 迁移到了 `net.dreamlu.mica.net` 避免跟原版 `t-io` 包冲突。
+
 ## 迁移到 mica-mqtt 2.4.2
 
 注意：2.4.2 将 MqttServerCustomizer 和 MqttClientCustomizer 抽到 mica-mqtt-server、mica-mqtt-client。Spring Boot 和 Solon 插件如果有使用到，请先将老的包导入删除，idea 会自动引入新的包。
