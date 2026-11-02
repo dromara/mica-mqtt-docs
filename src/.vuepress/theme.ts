@@ -5,6 +5,19 @@ import { zhSidebar } from "./sidebar/index.js";
 
 const SITE_URL = "https://mica-mqtt.dreamlu.net";
 
+/**
+ * 插件提取 og:image / JSON-LD image 用的是粗正则，
+ * 会把 markdown 图片标题（`![alt](url "标题")`）一起截进 URL，这里去掉尾部标题
+ */
+const cleanImageUrl = (url: string): string =>
+  url.replace(/\s+"[^"]*"\s*$/, "").trim();
+
+const normalizeImages = (image?: string | string[]): string[] => {
+  const list = Array.isArray(image) ? image : image ? [image] : [];
+  const cleaned = list.map(cleanImageUrl);
+  return cleaned.length ? cleaned : [`${SITE_URL}/logo.png`];
+};
+
 export default hopeTheme({
   hostname: SITE_URL,
 
@@ -70,6 +83,11 @@ export default hopeTheme({
       canonical: SITE_URL,
       // 正文没有配图时的 og:image 兜底，需要绝对地址
       fallBackImage: `${SITE_URL}/logo.png`,
+      // 修正 og:image 里被截进来的 markdown 标题
+      ogp: (ogp) => ({
+        ...ogp,
+        "og:image": cleanImageUrl(ogp["og:image"]),
+      }),
       // 主题只在 frontmatter 有 banner/cover 时才生成 twitter 标签，这里统一兜底
       customHead: (head, page) => {
         const description = page.frontmatter.description ?? page.excerpt ?? "";
@@ -91,7 +109,9 @@ export default hopeTheme({
         url: `${SITE_URL}${page.path}`,
         inLanguage: page.lang ?? "zh-CN",
         description: page.frontmatter.description ?? "",
-        image: (jsonLD as { image?: string }).image ?? `${SITE_URL}/logo.png`,
+        image: normalizeImages(
+          (jsonLD as { image?: string | string[] }).image
+        ),
         publisher: {
           "@type": "Organization",
           name: "如梦技术",
