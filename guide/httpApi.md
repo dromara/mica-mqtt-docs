@@ -1,5 +1,8 @@
 ---
 url: /guide/httpApi.md
+description: >-
+  mica-mqtt HTTP REST API 接口文档：列出发布、订阅、批量操作、客户端查询与踢出等接口的路径、请求参数与返回示例，可用于对接 MQTT
+  Broker 的开放接口。
 ---
 **注意：** 从 mica-mqtt 2.5.x 开始默认的 http api 端口由 ~~8083~~ 改为了 `18083`。
 
@@ -421,3 +424,9 @@ $ curl -i --basic -u mica:mica "http://127.0.0.1:8083/api/v1/client/subscription
   ]
 }
 ```
+
+## 相关文档
+
+* [mica-mqtt server 服务端使用文档（Java）](java/server.md)
+* [mica-mqtt-server-spring-boot-starter 使用文档](spring/server.md)
+* [mica-mqtt 大模型 MCP 服务接入](mcp.md)

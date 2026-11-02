@@ -1,5 +1,8 @@
 ---
 url: /mqtt/qos.md
+description: >-
+  MQTT 消息质量 QoS 0/1/2 的区别与选型建议：分别说明最多一次、至少一次、恰好一次的特点与适用场景，并给出 mica-mqtt-client
+  的发送性能参考值。
 ---
 ## 科普视频
 
@@ -80,3 +83,9 @@ url: /mqtt/qos.md
 * **QoS 2**：单客户端发送不建议超过 3000 条/秒，避免重试堆积，造成内存溢出。
 
 根据实际场景测试不同QoS的稳定性和资源消耗，最终选择性价比最高的方案。
+
+## 相关文档
+
+* [MQTT 保留消息：订阅即得最新状态](retain.md)
+* [MQTT Topic 规则：通配符与共享订阅](topic.md)
+* [mica-mqtt client 客户端使用文档（Java）](../guide/java/client.md)

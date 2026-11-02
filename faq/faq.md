@@ -1,5 +1,8 @@
 ---
 url: /faq/faq.md
+description: >-
+  mica-mqtt 常见问题汇总：收录空指针、解码异常、clientId 互踢、emqx 重连、nginx tcp 负载均衡、Mqtt 集群、ssl
+  证书、maven 拉取慢等 17 个高频问题的解决方案。
 ---
 ## 1、mica-mqtt-spring-boot-starter 空指针 NullPointerException
 
@@ -31,7 +34,7 @@ url: /faq/faq.md
 
 检查 emqx 配置，调整或关闭“强制关闭”的相关配置。
 
-![输入图片说明](./emqx_reconn.png "emqx 重连配置")
+![调整 emqx 强制关闭相关配置，避免高压下反复重连 =1538x1142](./emqx_reconn.png "emqx 重连配置")
 
 ## 6、nginx tcp 负载均衡
 
@@ -139,7 +142,7 @@ repositories {
 
 **将 `generate.pfx` 转成 pem 证书** https://www.toolhelper.cn/SSL/PfxToPem
 
-![输入图片说明](https://foruda.gitee.com/images/1731397117909805034/c878d443_372.png "屏幕截图")
+![mqttx 客户端中导入自签证书的配置界面](https://foruda.gitee.com/images/1731397117909805034/c878d443_372.png "mqttx 客户端配置")
 
 更多教程：openssl自签名证书教程(单域名证书/泛域名证书/多域名证书)详见：https://www.orcy.net.cn/340.html
 
@@ -258,7 +261,7 @@ com/github/benmanes/caffeine/cache/RemovalListener
 
 适当调整会话消息队列长度，按消息流入速率适当调整（建议流入的 1.5 到 2 倍），默认 1000。
 
-![输入图片说明](./emqx_session.png "会话消息队列长度")
+![调整 emqx 会话消息队列长度，避免 QoS 1/2 消息被丢弃 =1654x1364](./emqx_session.png "会话消息队列长度")
 
 ## 16、问题：拉取 maven 包很慢或拉不了?
 
@@ -322,3 +325,10 @@ com/github/benmanes/caffeine/cache/RemovalListener
 群没啥意义，没啥有用的反馈和意见，git issues 能记录问题，百度权重也很高。
 
 有问题请 gitee 提 issues，**github 的消息太多了也经常好几天才会注意到**，谢谢！
+
+## 相关文档
+
+* [MQTT clientId：重复使用会被踢下线](../mqtt/clientId.md)
+* [MQTT 消息质量 QoS 0/1/2 区别与选型](../mqtt/qos.md)
+* [mica-mqtt 升级指南](../version/update.md)
+* [mica-mqtt server 服务端使用文档（Java）](../guide/java/server.md)

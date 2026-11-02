@@ -1,5 +1,8 @@
 ---
 url: /guide/jfinal/client.md
+description: >-
+  mica-mqtt-client-jfinal-plugin 使用文档：JFinal Config
+  中注册客户端插件、启动后订阅主题、发送消息，以及连接监听与消息监听示例代码。
 ---
 ## 科普视频
 
@@ -91,3 +94,9 @@ public class TestMqttClientMessageListener implements IMqttClientMessageListener
     }
 }
 ```
+
+## 相关文档
+
+* [mica-mqtt-client-spring-boot-starter 使用文档](../spring/client.md)
+* [mica-mqtt-server-jfinal-plugin 使用文档](server.md)
+* [mica-mqtt client 客户端使用文档（Java）](../java/client.md)

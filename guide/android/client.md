@@ -1,5 +1,8 @@
 ---
 url: /guide/android/client.md
+description: >-
+  mica-mqtt-client 在 Android 原生应用中的使用文档：Gradle 依赖引入、INDEX.LIST
+  排除、客户端初始化配置与全局订阅，并附 Android 端运行效果截图。
 ---
 ## 科普视频
 
@@ -86,7 +89,7 @@ public interface HelloInterface{
 }
 ```
 
-![Android启动效果](./mica-mqtt-client-android.png)
+![Android 端 mica-mqtt client 运行效果 =1336x610](./mica-mqtt-client-android.png)
 
 #### 4. 全局订阅（2.2.9开始支持）
 
@@ -113,3 +116,9 @@ MqttClient.create()
     })
     .connectSync();
 ```
+
+## 相关文档
+
+* [mica-mqtt client 客户端使用文档（Java）](../java/client.md)
+* [mica-mqtt server Android 原生服务端使用文档](server.md)
+* [MQTT 消息质量 QoS 0/1/2 区别与选型](../../mqtt/qos.md)

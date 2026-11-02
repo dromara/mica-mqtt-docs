@@ -1,5 +1,8 @@
 ---
 url: /guide/spring/client.md
+description: >-
+  mica-mqtt-client-spring-boot-starter 使用文档：application.yml
+  配置项、可实现接口、上下线监听、订阅示例、共享订阅、多个客户端 Bean 与注解订阅方式。
 ---
 ## 科普视频
 
@@ -299,3 +302,10 @@ public void sub1(String topic, byte[] payload) {
     logger.info("topic:{} payload:{}", topic, ByteBufferUtil.toString(payload));
 }
 ```
+
+## 相关文档
+
+* [mica-mqtt-client-solon-plugin 使用文档](../solon/client.md)
+* [mica-mqtt-client-jfinal-plugin 使用文档](../jfinal/client.md)
+* [mica-mqtt server 服务端使用文档（Java）](../java/server.md)
+* [MQTT 消息质量 QoS 0/1/2 区别与选型](../../mqtt/qos.md)

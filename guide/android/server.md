@@ -1,5 +1,8 @@
 ---
 url: /guide/android/server.md
+description: >-
+  mica-mqtt-server 在 Android 原生应用中的使用文档：Gradle 依赖引入、服务端启动配置、混淆规则，以及
+  WebSocket、HTTP API 所需依赖说明。
 ---
 ## 科普视频
 
@@ -138,7 +141,7 @@ mqttServer.stop();
 
 **注意：** 2.4.4 之前版本请不要开启 `debug`，Android 上没有 `RuntimeMXBean` 会报错（2.4.4 已做兼容处理）。
 
-![Android启动效果](./mica-mqtt-server-android.png)
+![Android 端 mica-mqtt server 运行效果 =1252x771](./mica-mqtt-server-android.png)
 
 #### 3. 启用混淆，需添加如下配置
 
@@ -162,6 +165,12 @@ implementation 'net.dreamlu:mica-net-http:$micaNetVersion'
 
 如何确定 mica-net 的版本？可以打开 idea maven 依赖查看，当前依赖的 `mica-net-core` 版本，请确保跟 `mica-net-core` 使用一样的版本，避免版本兼容问题。
 
-![img.png](./img.png)
+![在 IDEA 中查看 mica-net-core 的依赖版本 =1405x1173](./img.png)
 
 另外 http api 需要项目带有 jackson、fastjson、fastjson2、gson、hutool-json、snack3（mica-mqtt 2.3.4开始支持） 这些json工具其一。
+
+## 相关文档
+
+* [mica-mqtt server 服务端使用文档（Java）](../java/server.md)
+* [mica-mqtt server Android 原生服务端使用文档](client.md)
+* [MQTT Topic 规则：通配符与共享订阅](../../mqtt/topic.md)

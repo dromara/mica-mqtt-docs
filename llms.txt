@@ -1,29 +1,37 @@
 # mica-mqtt
 
-> mica-mqtt 文档This file contains links to all documentation sections.
+> mica-mqtt 官方文档：基于 Java AIO 实现的轻量级 MQTT Broker 与客户端，支持 MQTT 3.1/3.1.1/5.0、WebSocket 与 HTTP REST API，提供 Spring Boot、Solon、JFinal、Android 的接入指南。This file contains links to all documentation sections.
 
 ## Table of Contents
 
-- [常见问题汇总](/faq/faq.md)
-- [mica mqtt 快速上手](/guide/index.md)
-- [mica mqtt client Android 原生客户端使用文档](/guide/android/client.md)
-- [mica mqtt server Android 原生服务端使用文档](/guide/android/server.md)
-- [mica mqtt Http Api 接口](/guide/httpApi.md)
-- [mica mqtt client 客户端使用文档](/guide/java/client.md)
-- [mica mqtt server 服务端使用文档](/guide/java/server.md)
-- [mica-mqtt-client-jfinal-plugin 使用文档](/guide/jfinal/client.md)
-- [mica-mqtt-server-jfinal-plugin 使用文档](/guide/jfinal/server.md)
-- [mica mqtt 大模型 MCP](/guide/mcp.md)
-- [mica-mqtt-client-solon-plugin 使用文档](/guide/solon/client.md)
-- [mica-mqtt-server-solon-plugin 使用文档](/guide/solon/server.md)
-- [mica-mqtt-client-spring-boot-starter 使用文档](/guide/spring/client.md)
-- [mica-mqtt-server-spring-boot-starter 使用文档](/guide/spring/server.md)
-- [mqtt clientId](/mqtt/clientId.md)
-- [mqtt 心跳保活](/mqtt/keepalive.md)
-- [mqtt 消息质量 QoS](/mqtt/qos.md)
-- [mqtt 保留消息](/mqtt/retain.md)
-- [mqtt 客户端工具](/mqtt/tool.md)
-- [mqtt Topic 规则](/mqtt/topic.md)
-- [mqtt 遗嘱消息](/mqtt/will.md)
-- [mica-mqtt 发行版本](/version/changelog.md)
-- [mica-mqtt 升级指南](/version/update.md)
+- [常见问题](/faq/index.md): mica-mqtt 使用过程中的常见问题解答目录：涵盖接入报错、连接异常、部署运维、安全证书与依赖工具等方向的排查思路与解决方案入口。
+- [mica-mqtt 常见问题汇总](/faq/faq.md): mica-mqtt 常见问题汇总：收录空指针、解码异常、clientId 互踢、emqx 重连、nginx tcp 负载均衡、Mqtt 集群、ssl 证书、maven 拉取慢等 17 个高频问题的解决方案。
+- [mica-mqtt 快速上手：五种应用形态接入指南](/guide/index.md): mica-mqtt 快速上手：按普通 Java、Android 原生、Spring Boot、Solon、JFinal 五种应用形态，列出客户端与服务端的接入文档入口。
+- [Android 原生应用接入](/guide/android/index.md): 在 Android 原生应用中接入 mica-mqtt 的客户端与服务端：Gradle 依赖引入、INDEX.LIST 排除、服务端混淆规则，以及 WebSocket、HTTP API 所需依赖说明。
+- [mica-mqtt client Android 原生客户端使用文档](/guide/android/client.md): mica-mqtt-client 在 Android 原生应用中的使用文档：Gradle 依赖引入、INDEX.LIST 排除、客户端初始化配置与全局订阅，并附 Android 端运行效果截图。
+- [mica-mqtt server Android 原生服务端使用文档](/guide/android/server.md): mica-mqtt-server 在 Android 原生应用中的使用文档：Gradle 依赖引入、服务端启动配置、混淆规则，以及 WebSocket、HTTP API 所需依赖说明。
+- [mica-mqtt HTTP REST API 接口文档](/guide/httpApi.md): mica-mqtt HTTP REST API 接口文档：列出发布、订阅、批量操作、客户端查询与踢出等接口的路径、请求参数与返回示例，可用于对接 MQTT Broker 的开放接口。
+- [普通 Java 应用接入](/guide/java/index.md): 在普通 Java 应用中接入 mica-mqtt 的客户端与服务端：Maven 依赖引入、MqttClient 初始化与服务端启动配置，含 WebSocket、HTTP API 与全局订阅说明。
+- [mica-mqtt client 客户端使用文档（Java）](/guide/java/client.md): mica-mqtt-client 在普通 Java 应用中的使用文档：Maven 依赖引入、MqttClient 初始化配置、订阅与发送、接口代理，以及 2.2.9 起的全局订阅用法。
+- [mica-mqtt server 服务端使用文档（Java）](/guide/java/server.md): mica-mqtt-server 在普通 Java 应用中的使用文档：Maven 依赖引入、2.5.x 与 2.4.x 两套服务端 API、WebSocket 与 HTTP API 开启方式及 http 依赖说明。
+- [JFinal 应用接入](/guide/jfinal/index.md): 在 JFinal 应用中接入 mica-mqtt：通过 mica-mqtt-client-jfinal-plugin 与 mica-mqtt-server-jfinal-plugin 集成，含插件注册、主题订阅、消息发送与监听示例代码。
+- [mica-mqtt-client-jfinal-plugin 使用文档](/guide/jfinal/client.md): mica-mqtt-client-jfinal-plugin 使用文档：JFinal Config 中注册客户端插件、启动后订阅主题、发送消息，以及连接监听与消息监听示例代码。
+- [mica-mqtt-server-jfinal-plugin 使用文档](/guide/jfinal/server.md): mica-mqtt-server-jfinal-plugin 使用文档：JFinal 中注册服务端插件、开启 MQTT、WebSocket 与 HTTP API，并通过 MqttServerKit 发送消息。
+- [mica-mqtt 大模型 MCP 服务接入](/guide/mcp.md): mica-mqtt 服务端 MCP 协议配置文档：说明在 mica-mqtt-server-spring-boot-starter 中开启 MCP 子配置的三个端点、yaml 配置示例与内置工具。
+- [Solon 应用接入](/guide/solon/index.md): 在 Solon 应用中接入 mica-mqtt：通过 mica-mqtt-client-solon-plugin 与 mica-mqtt-server-solon-plugin 集成，含配置项、消息监听、Token 校验与监控对接。
+- [mica-mqtt-client-solon-plugin 使用文档](/guide/solon/client.md): mica-mqtt-client-solon-plugin 使用文档：Solon 应用中的配置示例、可实现接口、上下线监听、订阅与共享订阅 topic 说明及 MqttClientTemplate 用法。
+- [mica-mqtt-server-solon-plugin 使用文档](/guide/solon/server.md): mica-mqtt-server-solon-plugin 使用文档：服务端配置项、消息监听接口、HTTP API 自定义 Token 校验，以及 Prometheus + Grafana 监控对接配置。
+- [Spring Boot 应用接入](/guide/spring/index.md): 在 Spring Boot 应用中接入 mica-mqtt：通过 mica-mqtt-client-spring-boot-starter 与 mica-mqtt-server-spring-boot-starter 自动装配，含配置项、消息监听、Token 校验与监控对接。
+- [mica-mqtt-client-spring-boot-starter 使用文档](/guide/spring/client.md): mica-mqtt-client-spring-boot-starter 使用文档：application.yml 配置项、可实现接口、上下线监听、订阅示例、共享订阅、多个客户端 Bean 与注解订阅方式。
+- [mica-mqtt-server-spring-boot-starter 使用文档](/guide/spring/server.md): mica-mqtt-server-spring-boot-starter 使用文档：服务端配置项、消息监听接口、HTTP API 自定义 Token 校验三种方式，以及 Prometheus + Grafana 监控对接。
+- [MQTT 协议科普](/mqtt/index.md): MQTT 协议入门与 mica-mqtt 使用要点：涵盖 Topic 规则与通配符、遗嘱消息、保留消息、心跳保活、clientId 唯一性、QoS 等级选择，以及常用客户端工具推荐。
+- [MQTT clientId：重复使用会被踢下线](/mqtt/clientId.md): MQTT clientId 使用规范：clientId 必须全局唯一，重复使用会导致客户端被服务端踢下线，mica-mqtt 提供 IMqttServerUniqueIdService 兼容老业务。
+- [MQTT 心跳保活：keepAlive 超时机制](/mqtt/keepalive.md): MQTT 心跳保活机制说明：客户端 keepAlive 与服务端心跳检测的超时计算规则，以及 mica-mqtt 中 keepaliveBackoff 对实际断开判定时间的影响。
+- [MQTT 消息质量 QoS 0/1/2 区别与选型](/mqtt/qos.md): MQTT 消息质量 QoS 0/1/2 的区别与选型建议：分别说明最多一次、至少一次、恰好一次的特点与适用场景，并给出 mica-mqtt-client 的发送性能参考值。
+- [MQTT 保留消息：订阅即得最新状态](/mqtt/retain.md): MQTT 保留消息机制说明：服务端为指定 Topic 保留最后一条消息，新订阅者建立订阅时立即收到，用于让订阅方快速获取设备最新状态。
+- [MQTT 客户端工具：桌面端与多语言库](/mqtt/tool.md): MQTT 客户端工具推荐：桌面端 mqttx、mqttx.fx 的下载地址，以及 Android、iOS、JavaScript、Dart 等语言的 MQTT 客户端库。
+- [MQTT Topic 规则：通配符与共享订阅](/mqtt/topic.md): MQTT Topic 命名规则与通配符详解：介绍 /、#、+ 三种层级通配符的匹配范围，以及 mica-mqtt 支持的 $queue 与 $share 两种共享订阅前缀用法。
+- [MQTT 遗嘱消息：设备离线通知](/mqtt/will.md): MQTT 遗嘱消息机制说明：客户端异常断开时由服务端代发遗嘱消息，常用于设备离线通知，以及 mica-mqtt 客户端 willMessage 的配置方式。
+- [发行版本](/version/index.md): mica-mqtt 版本信息目录：收录每个版本的完整变更记录，以及跨版本升级时需要调整的接口、配置与迁移步骤说明。
+- [mica-mqtt 发行版本](/version/changelog.md): mica-mqtt 发行版本记录：按版本号倒序排列每个版本的变更内容，包含功能新增、问题修复、依赖升级与文档调整，便于查阅升级差异。
+- [mica-mqtt 升级指南](/version/update.md): mica-mqtt 版本升级指南：说明升级到 2.6.2、2.4.2、2.1.x 及 dromara 社区版本时需要调整的客户端与服务端接口、SSL 双向认证配置。

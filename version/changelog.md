@@ -1,6 +1,11 @@
 ---
 url: /version/changelog.md
+description: mica-mqtt 发行版本记录：按版本号倒序排列每个版本的变更内容，包含功能新增、问题修复、依赖升级与文档调整，便于查阅升级差异。
 ---
+本页按版本号倒序记录 mica-mqtt 每个版本的变更内容，含功能新增、问题修复、依赖升级与文档调整。
+
+## v2.6
+
 ### v2.6.13 - 2026-09-27
 
 * ✨ mica-mqtt-client 接口支持 Default Method (github #217) 感谢 @galaxy-sea 贡献。
@@ -120,6 +125,8 @@ url: /version/changelog.md
 * feat(mqtt-server): 支持 MQTT 5.0 订阅的 No Local 标志功能，gitee #IDB1DN 感谢 `@rocker` 反馈。
 * feat(mqtt-server): 重构消息处理架构引入消息处理管线，消息转发携带 mqtt 5.0 properties 属性。
 
+## v2.5
+
 ### v2.5.13 - 2026-07-01
 
 * 🐛 mqtt-server 优化客户端互踢时的会话清理逻辑，感谢 `@十年` 反馈。
@@ -221,6 +228,8 @@ url: /version/changelog.md
 * :sparkles: 统一参数命名，userName 统一为 username。
 * :sparkles: 优化部分日志，使用中文，方便大家排查问题
 
+## v2.4
+
 ### v2.4.9 - 2025-06-27
 
 * :bug: mqtt server 修复 http/ws 端口占用 gitee #ICID15
@@ -302,6 +311,8 @@ url: /version/changelog.md
 * :truck: 切换到 central sonatype，central sonatype 不支持快照版，mica-mqtt 不再发布快照版。
 * :bug: 修复订阅发送时机问题 gitee #IB72L6 感谢 `@江上烽` 反馈
 
+## v2.3
+
 ### v2.3.9 - 2024-11-16
 
 * :sparkles: ssl 支持 **PKCS12** 证书，根据文件后缀自动判断 `.jks、.keystore` 识别为 **JKS证书**，`.p12、.pfx` 识别成 **PKCS12证书**。其他默认成**JKS**
@@ -365,6 +376,8 @@ url: /version/changelog.md
 * :sparkles: mica-mqtt-server 用户绑定使用 tio 内置 `Tio.bindUser(context, username)`。
 * :bug: 修复 @MqttClientSubscribe 类型错误时的异常提示。
 * :bug: mica-mqtt-client 修复重连可能失败的问题 gitee #I9RI8E 感谢 `@YYGuo` 反馈。
+
+## v2.2
 
 ### v2.2.13 - 2024-05-12
 
@@ -449,6 +462,8 @@ url: /version/changelog.md
 * :sparkles: MqttPublishMessage payload 参数均由 `ByteBuffer` 改为 `byte[]`，简化代码，方便使用。
 * :bug: 修复 高并发场景下取消订阅时报 ConcurrentModificationException github #5 感谢 `@yinyuncan` 反馈
 
+## v2.1
+
 ### v2.1.2 - 2023-04-26
 
 * :sparkles: mica-mqtt-client 支持 `reconnect(String ip, int port)` 转移到其他服务，订阅保留，连接成功时自动重新订阅。感谢 `@powerxie` 反馈
@@ -478,6 +493,8 @@ url: /version/changelog.md
 * :bug: 修复错别字 gitee #I6F2PA 感谢 @hpz 反馈
 * :arrow_up: 依赖升级
 
+## v2.0
+
 ### v2.0.3 - 2022-09-18
 
 * :sparkles: 完善 ssl 方法，方便使用。
@@ -498,6 +515,8 @@ url: /version/changelog.md
 
 * :sparkles: mica mqtt server 完善方法，方便使用。
 * :sparkles: 切换到自维护的 java8 t-io，注意：升级了 t-io 部分类名变更。
+
+## v1.3
 
 ### v1.3.9 - 2022-08-28
 
@@ -582,6 +601,8 @@ url: /version/changelog.md
 * :sparkles: 添加 github action，用于自动构建开发阶段的 SNAPSHOT 版本。
 * :sparkles: 示例项目拆分到 example 目录，mica-mqtt client、server starter 拆分到 starter 目录。
 * :arrow_up: 依赖升级.
+
+## v1.2
 
 ### v1.2.10 - 2022-03-20
 
@@ -692,6 +713,8 @@ url: /version/changelog.md
 * :memo: 更新 README.md
 * :arrow_up: 升级 tio 到 3.7.5.v20211028-RELEASE AioDecodeException 改为 TioDecodeException，
 
+## v1.1
+
 ### v1.1.4 - 2021-10-16
 
 * :sparkles: 添加 uniqueId 概念，用来处理 clientId 不唯一的场景。详见：gitee #I4DXQU
@@ -745,6 +768,8 @@ url: /version/changelog.md
 * :memo: 添加 JetBrains 连接。
 * :bug: 修复默认的消息转发器逻辑。
 * :bug: 修复 websocket 下线无法触发offline gitee #I47K13 感谢 `@willianfu` 同学反馈。
+
+## v1.0
 
 ### v1.0.6 - 2021-08-21
 
@@ -829,3 +854,8 @@ url: /version/changelog.md
 * :sparkles: 支持 MQTT 保留消息。
 * :sparkles: 支持自定义消息（mq）处理转发实现集群。
 * :sparkles: 支持 GraalVM 编译成本机可执行程序。
+
+## 相关文档
+
+* [mica-mqtt 升级指南](update.md)
+* [mica-mqtt 常见问题汇总](../faq/faq.md)

@@ -1,5 +1,8 @@
 ---
 url: /mqtt/clientId.md
+description: >-
+  MQTT clientId 使用规范：clientId 必须全局唯一，重复使用会导致客户端被服务端踢下线，mica-mqtt 提供
+  IMqttServerUniqueIdService 兼容老业务。
 ---
 ## 科普视频
 
@@ -9,3 +12,9 @@ url: /mqtt/clientId.md
 
 * clientId 对于在 mqtt 中起着十分重要的作用，请不要随意设置，建议按照产品、设备、sn等维度生成，并且**确保唯一**。
 * 如果实在是要兼容老业务，mica-mqtt 中可以实现 `IMqttServerUniqueIdService` 接口（1.1.4开始支持），返回的 `uniqueId` 会替代 clientId，后续的场景也是需要使用这个 `uniqueId` 来处理。
+
+## 相关文档
+
+* [MQTT 心跳保活：keepAlive 超时机制](keepalive.md)
+* [MQTT 遗嘱消息：设备离线通知](will.md)
+* [mica-mqtt server 服务端使用文档（Java）](../guide/java/server.md)

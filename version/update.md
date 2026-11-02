@@ -1,5 +1,8 @@
 ---
 url: /version/update.md
+description: >-
+  mica-mqtt 版本升级指南：说明升级到 2.6.2、2.4.2、2.1.x 及 dromara 社区版本时需要调整的客户端与服务端接口、SSL
+  双向认证配置。
 ---
 **mica-mqtt** 尽量减少对 api 的改动已保证老版本的平滑升级，但是有些大版本不得不改动。希望此文档对大家有所帮助。
 
@@ -101,3 +104,9 @@ mica:
       truststore-pass:          # 可选参数：ssl 双向认证 truststore 密码
       client-auth: none         # 是否需要客户端认证（双向认证），默认：NONE（不需要）
 ```
+
+## 相关文档
+
+* [mica-mqtt 发行版本](changelog.md)
+* [mica-mqtt 常见问题汇总](../faq/faq.md)
+* [mica-mqtt server 服务端使用文档（Java）](../guide/java/server.md)
