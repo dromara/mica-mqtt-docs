@@ -1,5 +1,6 @@
 ---
-title: mica mqtt 快速上手
+title: mica-mqtt 快速上手：五种应用形态接入指南
+description: mica-mqtt 快速上手：按普通 Java、Android 原生、Spring Boot、Solon、JFinal 五种应用形态，列出客户端与服务端的接入文档入口。
 icon: lightbulb
 ---
 
@@ -31,3 +32,9 @@ icon: lightbulb
 
 - [mica-mqtt-client-jfinal-plugin 使用文档](jfinal/client.md)
 - [mica-mqtt-server-jfinal-plugin 使用文档](jfinal/server.md)
+
+## 相关文档
+
+- [MQTT 协议科普](../mqtt/README.md)
+- [mica-mqtt HTTP REST API 接口文档](httpApi.md)
+- [mica-mqtt 大模型 MCP 服务接入](mcp.md)

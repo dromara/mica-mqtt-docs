@@ -1,5 +1,6 @@
 ---
 title: mica-mqtt-client-solon-plugin 使用文档
+description: mica-mqtt-client-solon-plugin 使用文档：Solon 应用中的配置示例、可实现接口、上下线监听、订阅与共享订阅 topic 说明及 MqttClientTemplate 用法。
 icon: microchip
 order: 1
 ---
@@ -220,3 +221,9 @@ public class ClientService {
 
 }
 ```
+
+## 相关文档
+
+- [mica-mqtt-client-spring-boot-starter 使用文档](../spring/client.md)
+- [mica-mqtt-server-solon-plugin 使用文档](server.md)
+- [mica-mqtt client 客户端使用文档（Java）](../java/client.md)

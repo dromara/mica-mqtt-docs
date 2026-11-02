@@ -1,5 +1,6 @@
 ---
-title: mica mqtt client 客户端使用文档
+title: mica-mqtt client 客户端使用文档（Java）
+description: mica-mqtt-client 在普通 Java 应用中的使用文档：Maven 依赖引入、MqttClient 初始化配置、订阅与发送、接口代理，以及 2.2.9 起的全局订阅用法。
 icon: microchip
 order: 1
 ---
@@ -105,3 +106,10 @@ MqttClient.create()
     })
     .connectSync();
 ```
+
+## 相关文档
+
+- [mica-mqtt server 服务端使用文档（Java）](server.md)
+- [MQTT 消息质量 QoS 0/1/2 区别与选型]](../../mqtt/qos.md)
+- [MQTT Topic 规则：通配符与共享订阅](../../mqtt/topic.md)
+- [mica-mqtt 常见问题汇总](../../faq/faq.md)

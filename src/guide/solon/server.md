@@ -1,5 +1,6 @@
 ---
 title: mica-mqtt-server-solon-plugin 使用文档
+description: mica-mqtt-server-solon-plugin 使用文档：服务端配置项、消息监听接口、HTTP API 自定义 Token 校验，以及 Prometheus + Grafana 监控对接配置。
 icon: server
 order: 2
 ---
@@ -400,3 +401,9 @@ curl -u mica:mica http://localhost:18083/mqtt/publish?topic=/test&message=hello
 #### 配置说明
 
 solon 官方配置文档：https://solon.noear.org/article/588
+
+## 相关文档
+
+- [mica-mqtt-server-spring-boot-starter 使用文档](../spring/server.md)
+- [mica-mqtt-client-solon-plugin 使用文档](client.md)
+- [mica-mqtt server 服务端使用文档（Java）](../java/server.md)

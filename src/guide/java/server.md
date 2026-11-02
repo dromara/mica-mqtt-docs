@@ -1,5 +1,6 @@
 ---
-title: mica mqtt server 服务端使用文档
+title: mica-mqtt server 服务端使用文档（Java）
+description: mica-mqtt-server 在普通 Java 应用中的使用文档：Maven 依赖引入、2.5.x 与 2.4.x 两套服务端 API、WebSocket 与 HTTP API 开启方式及 http 依赖说明。
 icon: server
 order: 2
 ---
@@ -145,8 +146,13 @@ mqttServer.stop();
 
 如何确定 mica-net 的版本？可以打开 idea maven 依赖查看，当前依赖的 `mica-net-core` 版本，请确保跟 `mica-net-core` 使用一样的版本，避免版本兼容问题。
 
-![img.png](./img.png)
+![在 IDEA 中查看 mica-net-core 的依赖版本 =1405x1173](./img.png)
 
 另外 http api 需要项目带有 jackson2、jackson3（mica-mqtt 2.5.5 开始支持）、fastjson、fastjson2、gson、hutool-json、snack3（mica-mqtt 2.3.4开始支持） 这些json工具其一。
 
+## 相关文档
 
+- [mica-mqtt client 客户端使用文档（Java）](client.md)
+- [mica-mqtt HTTP REST API 接口文档](../httpApi.md)
+- [MQTT Topic 规则：通配符与共享订阅](../../mqtt/topic.md)
+- [mica-mqtt 常见问题汇总](../../faq/faq.md)

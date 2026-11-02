@@ -1,5 +1,6 @@
 ---
 title: mica-mqtt-server-jfinal-plugin 使用文档
+description: mica-mqtt-server-jfinal-plugin 使用文档：JFinal 中注册服务端插件、开启 MQTT、WebSocket 与 HTTP API，并通过 MqttServerKit 发送消息。
 icon: server
 order: 2
 ---
@@ -49,3 +50,9 @@ plugin.start();
 // 更多方法可以直接使用 MqttServerKit 点出来
 MqttServerKit.publish(String clientId, String topic, byte[] payload);
 ```
+
+## 相关文档
+
+- [mica-mqtt-server-spring-boot-starter 使用文档](../spring/server.md)
+- [mica-mqtt-client-jfinal-plugin 使用文档](client.md)
+- [mica-mqtt server 服务端使用文档（Java）](../java/server.md)

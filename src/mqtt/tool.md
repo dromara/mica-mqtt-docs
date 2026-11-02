@@ -1,5 +1,6 @@
 ---
-title: mqtt 客户端工具
+title: MQTT 客户端工具：桌面端与多语言库
+description: MQTT 客户端工具推荐：桌面端 mqttx、mqttx.fx 的下载地址，以及 Android、iOS、JavaScript、Dart 等语言的 MQTT 客户端库。
 icon: screwdriver-wrench
 order: 7
 ---
@@ -17,3 +18,9 @@ order: 7
 - ios: https://github.com/novastone-media/MQTT-Client-Framework
 - js(uniapp、小程序): https://github.com/mqttjs/MQTT.js
 - dart mqtt client: https://pub.dev/packages/mqtt_client
+
+## 相关文档
+
+- [mica-mqtt 常见问题汇总](../faq/faq.md)
+- [MQTT Topic 规则：通配符与共享订阅](topic.md)
+- [mica-mqtt 快速上手](../guide/README.md)

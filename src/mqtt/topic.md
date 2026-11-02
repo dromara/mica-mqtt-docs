@@ -1,5 +1,6 @@
 ---
-title: mqtt Topic 规则
+title: MQTT Topic 规则：通配符与共享订阅
+description: MQTT Topic 命名规则与通配符详解：介绍 /、#、+ 三种层级通配符的匹配范围，以及 mica-mqtt 支持的 $queue 与 $share 两种共享订阅前缀用法。
 icon: hashtag
 order: 1
 ---
@@ -20,3 +21,10 @@ order: 1
 2. 分组订阅：订阅前缀 `$share/<group>/`，组客户端订阅了 `$share/group1/topic`、`$share/group2/topic`..，发布者发布到 `topic`，则消息会发布到每个 **group** 中，但是每个 **group** 中只有一个客户端会接收到消息。
 
 **注意：** 如果发布的 `topic` 以 `/` 开头，例如：`/topic/test`，需要订阅 `$share/group1//topic/test`，另外 mica-mqtt 默认随机消息路由，共享订阅的多个客户端会随机收到消息。
+
+## 相关文档
+
+- [MQTT 消息质量 QoS 0/1/2 区别与选型](qos.md)
+- [MQTT 遗嘱消息：设备离线通知](will.md)
+- [MQTT 保留消息：订阅即得最新状态](retain.md)
+- [mica-mqtt client 客户端使用文档（Java）](../guide/java/client.md)

@@ -1,5 +1,6 @@
 ---
-title: mica mqtt 大模型 MCP
+title: mica-mqtt 大模型 MCP 服务接入
+description: mica-mqtt 服务端 MCP 协议配置文档：说明在 mica-mqtt-server-spring-boot-starter 中开启 MCP 子配置的三个端点、yaml 配置示例与内置工具。
 icon: lightbulb
 ---
 
@@ -32,18 +33,23 @@ mqtt:
         sse-message-endpoint: /mcp/sse/message  # sse message 端点
 ```
 
-![mica-mqtt-mcp-config.png](/assets/image/mica-mqtt-mcp-config.png)
+![mica-mqtt 服务端 MCP 配置示例 =1115x1203](/assets/image/mica-mqtt-mcp-config.png)
 
 注意：请求头添加的是 mica-mqtt-server 的 http api 默认的 basic 认证的密钥。
 
 ### 工具
 
-![mica-mqtt-mcp-tools.png](/assets/image/mica-mqtt-mcp-tools.png)
+![mica-mqtt MCP 内置的 mqtt 状态与 mqtt 发布工具 =1443x1547](/assets/image/mica-mqtt-mcp-tools.png)
 
 注意：mica-mqtt-server mcp 目前内置了 mqtt 状态和 mqtt 发布2个 tools 工具，未来会添加更多。
 
 ## 效果
 
-![mica-mqtt-mcp-test1.png](/assets/image/mica-mqtt-mcp-test1.png)
+![通过 MCP 客户端查看 mqtt 状态的效果 =1083x1269](/assets/image/mica-mqtt-mcp-test1.png)
 
-![mica-mqtt-mcp-test2.png](/assets/image/mica-mqtt-mcp-test2.png)
+![通过 MCP 客户端发布 mqtt 消息的效果 =1507x925](/assets/image/mica-mqtt-mcp-test2.png)
+
+## 相关文档
+
+- [mica-mqtt-server-spring-boot-starter 使用文档](spring/server.md)
+- [mica-mqtt HTTP REST API 接口文档](httpApi.md)
