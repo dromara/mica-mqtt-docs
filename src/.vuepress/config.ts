@@ -24,7 +24,8 @@ gtag('config', 'G-TEFQVE72ZE');`,
     "/": {
       lang: "zh-CN",
       title: "mica-mqtt",
-      description: "mica-mqtt 文档",
+      description:
+        "mica-mqtt 官方文档：基于 Java AIO 实现的轻量级 MQTT Broker 与客户端，支持 MQTT 3.1/3.1.1/5.0、WebSocket 与 HTTP REST API，提供 Spring Boot、Solon、JFinal、Android 的接入指南。",
     }
   },
 

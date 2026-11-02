@@ -1,14 +1,16 @@
 ---
 home: true
 icon: home
-title: java mqtt 基于 java aio 实现的轻量级 mqtt | mica mqtt 官方文档
+title: mica-mqtt 官方文档 - Java MQTT Broker 与客户端
+description: mica-mqtt 官方文档：基于 Java AIO 实现的轻量级 MQTT Broker 与客户端，支持 MQTT 3.1/3.1.1/5.0、WebSocket 与 HTTP REST API，提供 Spring Boot、Solon、JFinal、Android 的接入指南。
 head:
   - - meta
     - name: keywords
-      content: mica-mqtt, MQTT, java mqtt, mqtt java, 开源物联网组件, 低延迟高性能, 支持多种 MQTT 协议版本, WebSocket MQTT 支持, HTTP REST API 支持, 集群功能, 物联网消息通信, 云端 MQTT Broker, 边缘端消息通信, 群组类 IM, 消息推送, mica-net, 基于 t-io 实现, 易于集成与二次开发, mica-mqtt-client-spring-boot-starter, mica-mqtt-server-spring-boot-starter, GraalVM 编译支持, mqtt.js 支持
+      content: mica-mqtt, mqtt, java mqtt, mqtt broker, mqtt client, mqtt server, java mqtt broker, mqtt 教程, 物联网 mqtt
 heroImage: mica-mqtt.png
-heroText: mica-mqtt
-tagline: java mqtt 基于 java aio 实现，开源、简单、易用、低延迟、高性能百万级 java mqtt client 组件和 java mqtt broker 服务。
+heroAlt: mica-mqtt 项目图标
+heroText: mica-mqtt：Java MQTT Broker 与客户端
+tagline: 基于 Java AIO 实现的轻量级 MQTT Broker 与客户端，开源、易集成，支持 MQTT 3.1/3.1.1/5.0、WebSocket 与 HTTP REST API。
 actions:
   - text: mqtt入门
     link: ./mqtt/

@@ -3,12 +3,14 @@ import { hopeTheme } from "vuepress-theme-hope";
 import { zhNavbar } from "./navbar/index.js";
 import { zhSidebar } from "./sidebar/index.js";
 
+const SITE_URL = "https://mica-mqtt.dreamlu.net";
+
 export default hopeTheme({
-  hostname: "https://mica-mqtt.dreamlu.net",
+  hostname: SITE_URL,
 
   author: {
     name: "如梦技术",
-    url: "https://mica-mqtt.dreamlu.net",
+    url: SITE_URL,
   },
 
   logo: "logo.png",
@@ -62,6 +64,41 @@ export default hopeTheme({
   },
 
   plugins: {
+    // SEO：canonical / og:image 兜底 / twitter 卡片 / JSON-LD 增强
+    seo: {
+      // 首选地址。必须传字符串前缀，传 true 是空操作，一个标签都不会生成
+      canonical: SITE_URL,
+      // 正文没有配图时的 og:image 兜底，需要绝对地址
+      fallBackImage: `${SITE_URL}/logo.png`,
+      // 主题只在 frontmatter 有 banner/cover 时才生成 twitter 标签，这里统一兜底
+      customHead: (head, page) => {
+        const description = page.frontmatter.description ?? page.excerpt ?? "";
+        head.push(["meta", { name: "twitter:card", content: "summary_large_image" }]);
+        head.push(["meta", { name: "twitter:title", content: page.title }]);
+        if (description)
+          head.push(["meta", { name: "twitter:description", content: description }]);
+        head.push(["meta", { name: "twitter:image", content: `${SITE_URL}/logo.png` }]);
+      },
+      // JSON-LD：补 url / inLanguage / description / image / publisher
+      jsonLd: (jsonLD, page) => ({
+        ...jsonLD,
+        "@context": "https://schema.org",
+        // 技术文档用 TechArticle 比 Article 更精确
+        "@type":
+          jsonLD["@type"] === "Article"
+            ? ("TechArticle" as unknown as typeof jsonLD["@type"])
+            : jsonLD["@type"],
+        url: `${SITE_URL}${page.path}`,
+        inLanguage: page.lang ?? "zh-CN",
+        description: page.frontmatter.description ?? "",
+        image: (jsonLD as { image?: string }).image ?? `${SITE_URL}/logo.png`,
+        publisher: {
+          "@type": "Organization",
+          name: "如梦技术",
+          url: SITE_URL,
+        },
+      }),
+    },
     icon: {
       assets: "fontawesome"
     },
