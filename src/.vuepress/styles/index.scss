@@ -1,1 +1,10 @@
 // place your custom styles here
+
+// 主题的 `[vp-content] img` 只给了 max-width: 100%，没有 height: auto。
+// 正文里的图片用 markdown 的 `=宽x高` 写死了尺寸（markdown.imgSize 开启后
+// 会输出 width/height 属性，用来预留空间、避免累积布局偏移），
+// 两者叠加时宽度被容器压住、高度仍是属性里的值，图片就被拉变形了。
+// 补一句 height: auto，宽高比自适应，同时保留预留空间防抖动的效果。
+[vp-content] img {
+  height: auto;
+}
