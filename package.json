@@ -11,6 +11,8 @@
     "update": "pnpm dlx vp-update"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.3.1",
+    "@fortawesome/free-solid-svg-icons": "^7.3.1",
     "@vuepress/bundler-vite": "2.0.0-rc.31",
     "@vuepress/plugin-llms": "2.0.0-rc.137",
     "@vuepress/plugin-notice": "2.0.0-rc.135",

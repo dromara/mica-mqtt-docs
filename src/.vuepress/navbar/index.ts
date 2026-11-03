@@ -13,7 +13,7 @@ export const zhNavbar = navbar([
     children: [
       {
         text: "Topic 规则",
-        icon: "hashtag",
+        icon: "sitemap",
         link: "topic",
       },
       {

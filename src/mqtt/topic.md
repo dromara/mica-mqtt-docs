@@ -1,7 +1,7 @@
 ---
 title: MQTT Topic 规则：通配符与共享订阅
 description: MQTT Topic 命名规则与通配符详解：介绍 /、#、+ 三种层级通配符的匹配范围，以及 mica-mqtt 支持的 $queue 与 $share 两种共享订阅前缀用法。
-icon: hashtag
+icon: sitemap
 order: 1
 ---
 

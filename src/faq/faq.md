@@ -183,7 +183,7 @@ head:
 - http://nginx.org/en/docs/stream/ngx_stream_proxy_module.html
 
 #### 6.2 配置 /etc/nginx/nginx.conf，示例:
-```
+```nginx
 stream {
   upstream stream_backend {
       zone tcp_servers 64k;
