@@ -45,7 +45,7 @@ description: >-
 
 #### 6.2 配置 /etc/nginx/nginx.conf，示例:
 
-```
+```nginx
 stream {
   upstream stream_backend {
       zone tcp_servers 64k;
