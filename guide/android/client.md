@@ -89,7 +89,7 @@ public interface HelloInterface{
 }
 ```
 
-![Android 端 mica-mqtt client 运行效果 =1336x610](./mica-mqtt-client-android.png)
+![Android 端 mica-mqtt client 运行效果 =1336x610](./mica-mqtt-client-android.webp)
 
 #### 4. 全局订阅（2.2.9开始支持）
 

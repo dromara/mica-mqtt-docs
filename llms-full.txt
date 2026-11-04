@@ -54,7 +54,7 @@ description: >-
 
 检查 emqx 配置，调整或关闭“强制关闭”的相关配置。
 
-![调整 emqx 强制关闭相关配置，避免高压下反复重连 =1538x1142](./emqx_reconn.png "emqx 重连配置")
+![调整 emqx 强制关闭相关配置，避免高压下反复重连 =1538x1142](./emqx_reconn.webp "emqx 重连配置")
 
 ## 6、nginx tcp 负载均衡
 
@@ -281,7 +281,7 @@ com/github/benmanes/caffeine/cache/RemovalListener
 
 适当调整会话消息队列长度，按消息流入速率适当调整（建议流入的 1.5 到 2 倍），默认 1000。
 
-![调整 emqx 会话消息队列长度，避免 QoS 1/2 消息被丢弃 =1654x1364](./emqx_session.png "会话消息队列长度")
+![调整 emqx 会话消息队列长度，避免 QoS 1/2 消息被丢弃 =1654x1364](./emqx_session.webp "会话消息队列长度")
 
 ## 16、问题：拉取 maven 包很慢或拉不了?
 
@@ -507,7 +507,7 @@ public interface HelloInterface{
 }
 ```
 
-![Android 端 mica-mqtt client 运行效果 =1336x610](./mica-mqtt-client-android.png)
+![Android 端 mica-mqtt client 运行效果 =1336x610](./mica-mqtt-client-android.webp)
 
 #### 4. 全局订阅（2.2.9开始支持）
 
@@ -687,7 +687,7 @@ mqttServer.stop();
 
 **注意：** 2.4.4 之前版本请不要开启 `debug`，Android 上没有 `RuntimeMXBean` 会报错（2.4.4 已做兼容处理）。
 
-![Android 端 mica-mqtt server 运行效果 =1252x771](./mica-mqtt-server-android.png)
+![Android 端 mica-mqtt server 运行效果 =1252x771](./mica-mqtt-server-android.webp)
 
 #### 3. 启用混淆，需添加如下配置
 
@@ -1679,21 +1679,21 @@ mqtt:
         sse-message-endpoint: /mcp/sse/message  # sse message 端点
 ```
 
-![mica-mqtt 服务端 MCP 配置示例 =1115x1203](/assets/image/mica-mqtt-mcp-config.png)
+![mica-mqtt 服务端 MCP 配置示例 =1115x1203](/assets/image/mica-mqtt-mcp-config.webp)
 
 注意：请求头添加的是 mica-mqtt-server 的 http api 默认的 basic 认证的密钥。
 
 ### 工具
 
-![mica-mqtt MCP 内置的 mqtt 状态与 mqtt 发布工具 =1443x1547](/assets/image/mica-mqtt-mcp-tools.png)
+![mica-mqtt MCP 内置的 mqtt 状态与 mqtt 发布工具 =1443x1547](/assets/image/mica-mqtt-mcp-tools.webp)
 
 注意：mica-mqtt-server mcp 目前内置了 mqtt 状态和 mqtt 发布2个 tools 工具，未来会添加更多。
 
 ## 效果
 
-![通过 MCP 客户端查看 mqtt 状态的效果 =1083x1269](/assets/image/mica-mqtt-mcp-test1.png)
+![通过 MCP 客户端查看 mqtt 状态的效果 =1083x1269](/assets/image/mica-mqtt-mcp-test1.webp)
 
-![通过 MCP 客户端发布 mqtt 消息的效果 =1507x925](/assets/image/mica-mqtt-mcp-test2.png)
+![通过 MCP 客户端发布 mqtt 消息的效果 =1507x925](/assets/image/mica-mqtt-mcp-test2.webp)
 
 ## 相关文档
 
