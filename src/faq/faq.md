@@ -175,7 +175,7 @@ head:
 
 检查 emqx 配置，调整或关闭“强制关闭”的相关配置。
 
-![调整 emqx 强制关闭相关配置，避免高压下反复重连 =1538x1142](./emqx_reconn.png "emqx 重连配置")
+![调整 emqx 强制关闭相关配置，避免高压下反复重连 =1538x1142](./emqx_reconn.webp "emqx 重连配置")
 
 ## 6、nginx tcp 负载均衡
 #### 6.1 搜索关键词 `nginx tcp 负载均衡` 即可：
@@ -389,7 +389,7 @@ com/github/benmanes/caffeine/cache/RemovalListener
 
 适当调整会话消息队列长度，按消息流入速率适当调整（建议流入的 1.5 到 2 倍），默认 1000。
 
-![调整 emqx 会话消息队列长度，避免 QoS 1/2 消息被丢弃 =1654x1364](./emqx_session.png "会话消息队列长度")
+![调整 emqx 会话消息队列长度，避免 QoS 1/2 消息被丢弃 =1654x1364](./emqx_session.webp "会话消息队列长度")
 
 
 ## 16、问题：拉取 maven 包很慢或拉不了?

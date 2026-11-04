@@ -33,21 +33,21 @@ mqtt:
         sse-message-endpoint: /mcp/sse/message  # sse message 端点
 ```
 
-![mica-mqtt 服务端 MCP 配置示例 =1115x1203](/assets/image/mica-mqtt-mcp-config.png)
+![mica-mqtt 服务端 MCP 配置示例 =1115x1203](/assets/image/mica-mqtt-mcp-config.webp)
 
 注意：请求头添加的是 mica-mqtt-server 的 http api 默认的 basic 认证的密钥。
 
 ### 工具
 
-![mica-mqtt MCP 内置的 mqtt 状态与 mqtt 发布工具 =1443x1547](/assets/image/mica-mqtt-mcp-tools.png)
+![mica-mqtt MCP 内置的 mqtt 状态与 mqtt 发布工具 =1443x1547](/assets/image/mica-mqtt-mcp-tools.webp)
 
 注意：mica-mqtt-server mcp 目前内置了 mqtt 状态和 mqtt 发布2个 tools 工具，未来会添加更多。
 
 ## 效果
 
-![通过 MCP 客户端查看 mqtt 状态的效果 =1083x1269](/assets/image/mica-mqtt-mcp-test1.png)
+![通过 MCP 客户端查看 mqtt 状态的效果 =1083x1269](/assets/image/mica-mqtt-mcp-test1.webp)
 
-![通过 MCP 客户端发布 mqtt 消息的效果 =1507x925](/assets/image/mica-mqtt-mcp-test2.png)
+![通过 MCP 客户端发布 mqtt 消息的效果 =1507x925](/assets/image/mica-mqtt-mcp-test2.webp)
 
 ## 相关文档
 

@@ -140,7 +140,7 @@ mqttServer.stop();
 
 **注意：** 2.4.4 之前版本请不要开启 `debug`，Android 上没有 `RuntimeMXBean` 会报错（2.4.4 已做兼容处理）。
 
-![Android 端 mica-mqtt server 运行效果 =1252x771](./mica-mqtt-server-android.png)
+![Android 端 mica-mqtt server 运行效果 =1252x771](./mica-mqtt-server-android.webp)
 
 #### 3. 启用混淆，需添加如下配置
 
