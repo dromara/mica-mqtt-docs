@@ -156,8 +156,8 @@ export default hopeTheme({
     },
     notice: [{
       path: '/',
-      title: 'mica-mqtt 2.6.14 发布',
-      content: 'mica-mqtt 2.6.13 发布，新增 connAckTimeout 配置项，修复等待 CONNACK 期间重复重连、重复打开 Socket 的问题',
+      title: 'mica-mqtt 2.6.15 发布',
+      content: 'mica-mqtt 2.6.15 发布，websocket 握手按 RFC 6455 重写，优化 SSL',
       // path 为 '/' 会被所有页面命中，默认每次新会话都弹一次、还压住页面标题。
       // showOnce 用 localStorage 记住已关闭状态，同一条公告只在首次访问时出现。
       showOnce: true,
